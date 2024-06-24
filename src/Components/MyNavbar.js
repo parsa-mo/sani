@@ -1,18 +1,35 @@
-import React from 'react';
-import sanilogo from '../Images/sanilogo.png';
-import {NavLogo, NavWrapper} from "../Styles/NavbarStyle";
+import React from "react";
+import sanilogo from "../Images/sanilogo.png";
+import {
+  NavLogo,
+  NavContainer,
+  NavLink,
+  NavAnchor,
+  NavLinksContainer,
+  NavButton,
+} from "../Styles/NavbarStyle";
+import { NavLinks } from "../Links/Data";
 
 const MyNavbar = () => {
-    return (
-        <NavWrapper>
-            <nav>
-                <ul>
-                    <li><a href="/"><NavLogo src={sanilogo} alt="logo"/></a></li>
-                    <li><a href="/aboutus"> About </a></li>
-                </ul>
-            </nav>
-        </NavWrapper>
-    );
+  return (
+    <NavContainer>
+      <a href="/">
+        <NavLogo src={sanilogo} alt="logo" />
+      </a>
+      <NavLinksContainer>
+        {NavLinks.map((link) => {
+          return (
+            <NavLink key={link.id}>
+              <NavButton>
+                {" "}
+                <NavAnchor href={link.href}>{link.name} </NavAnchor>
+              </NavButton>
+            </NavLink>
+          );
+        })}
+      </NavLinksContainer>
+    </NavContainer>
+  );
 };
 
 export default MyNavbar;
