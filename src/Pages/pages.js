@@ -1,4 +1,4 @@
-import About from "./About.js";
+import AboutUs from "./AboutUs.js";
 import Home from "./Home.js";
 
-export { Home, About };
+export { Home, AboutUs };

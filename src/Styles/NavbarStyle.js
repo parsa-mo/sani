@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-//import { Theme } from "./Theme";
 
 const NavContainer = styled.nav`
   padding: 20px 50px; /* Adjust padding as needed */
@@ -33,7 +32,7 @@ const NavLinksContainer = styled.ul`
   padding: 0; /* Removes default padding */
 `;
 
-const NavLink = styled.li`
+const NavList = styled.li`
   list-style: none; /* Removes default list style */
   margin-left: 50px; /* Adjust spacing between links */
 `;
@@ -55,19 +54,12 @@ const NavButton = styled.button`
   }
 `;
 
-const NavAnchor = styled.a`
-  color: rgba(255, 255, 255, 0.75) !important;
-  font-size: 1rem;
-  text-align: center;
-  display: block;
-  font-weight: 700;
-`;
+// const NavAnchor = styled.a`
+//   color: rgba(255, 255, 255, 0.75) !important;
+//   font-size: 1rem;
+//   text-align: center;
+//   display: block;
+//   font-weight: 700;
+// `;
 
-export {
-  NavButton,
-  NavContainer,
-  NavLogo,
-  NavLinksContainer,
-  NavLink,
-  NavAnchor,
-};
+export { NavButton, NavContainer, NavLogo, NavLinksContainer, NavList };

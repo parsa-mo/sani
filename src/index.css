@@ -19,6 +19,15 @@ a {
     text-decoration: none;
 }
 
+.ActiveNavButton {
+    border: transparent !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.ActiveNavButton:hover {
+    background: rgba(103, 103, 103, 0.2) !important;
+}
+
 
 
 
