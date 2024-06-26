@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Navbar">
-      <change afterPath="$PROJECT_DIR$/src/Pages/AboutUs.js" afterDir="false" />
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MyNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/About.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/HomeStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/HomeStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Parsa &lt;mo.parsa@yahoo.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -58,7 +61,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/IdeaProjects/sani/src/Images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/Desktop/Codes/React_Tutorials/react-router6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -115,7 +118,9 @@
       <workItem from="1718886857124" duration="3673000" />
       <workItem from="1719192201057" duration="13593000" />
       <workItem from="1719218786573" duration="613000" />
-      <workItem from="1719320687871" duration="3243000" />
+      <workItem from="1719320687871" duration="3522000" />
+      <workItem from="1719372524050" duration="2063000" />
+      <workItem from="1719374959542" duration="9351000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -133,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719208062745</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Navbar(update)">
+      <option name="closed" value="true" />
+      <created>1719324167041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719324167041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +166,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="React-Router" />
     <MESSAGE value="Navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar" />
+    <MESSAGE value="Navbar(update)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar(update)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

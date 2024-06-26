@@ -34,7 +34,7 @@ const NavLinksContainer = styled.ul`
 
 const NavList = styled.li`
   list-style: none; /* Removes default list style */
-  margin-left: 50px; /* Adjust spacing between links */
+  margin-left: 40px; /* Adjust spacing between links */
 `;
 
 const NavButton = styled.button`
@@ -53,13 +53,5 @@ const NavButton = styled.button`
     background: rgba(255, 255, 255, 0.2);
   }
 `;
-
-// const NavAnchor = styled.a`
-//   color: rgba(255, 255, 255, 0.75) !important;
-//   font-size: 1rem;
-//   text-align: center;
-//   display: block;
-//   font-weight: 700;
-// `;
 
 export { NavButton, NavContainer, NavLogo, NavLinksContainer, NavList };
