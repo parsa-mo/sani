@@ -7,12 +7,13 @@ const NavContainer = styled.nav`
     255,
     255,
     255,
-    0.1
+    0.025
   ); /* Minimal white background for visibility */
   backdrop-filter: blur(2px); /* Blur effect */
   display: flex;
   align-items: center; /* Centers items vertically */
-  position: fixed;
+  position: absolute;
+  top: 0;
   z-index: 10;
   left: 0; /* Stretch to the left edge of viewport */
   right: 0; /* Stretch to the right edge of viewport */

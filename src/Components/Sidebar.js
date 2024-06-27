@@ -3,10 +3,14 @@ import {
   SidebarContainer,
   SidebarLogos,
   DropDownContainer,
+  SidebarList,
+  SidebarListItem,
+  StyledNavLink,
 } from "../Styles/SidebarStyle"; // Make sure to adjust the path as per your project structure
 import { NavLink } from "react-router-dom";
 import sanilogo from "../Images/sanilogo.png";
 import SidebarLogo from "../Images/SidebarLogo.png";
+import { NavLinks } from "../Links/Data";
 
 const Sidebar = () => {
   const [rotate, setRotate] = useState(false);
@@ -33,17 +37,13 @@ const Sidebar = () => {
         />
       </SidebarContainer>
       <DropDownContainer isVisible={dropdown}>
-        <ul>
-          <li>
-            <NavLink to="/link1">Link 1</NavLink>
-          </li>
-          <li>
-            <NavLink to="/link2">Link 2</NavLink>
-          </li>
-          <li>
-            <NavLink to="/link3">Link 3</NavLink>
-          </li>
-        </ul>
+        {NavLinks.map((link) => (
+          <SidebarList key={link.id}>
+            <SidebarListItem>
+              <StyledNavLink to={link.href}>{link.name}</StyledNavLink>
+            </SidebarListItem>
+          </SidebarList>
+        ))}
       </DropDownContainer>
     </>
   );

@@ -10,6 +10,8 @@ export const HomeContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  position: relative;
+  top: 0;
   justify-content: center;
   align-items: center;
   z-index: -1;
