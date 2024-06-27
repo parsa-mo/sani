@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Sidebar Complete">
-      <change afterPath="$PROJECT_DIR$/src/Components/Footnote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Footer">
+      <change afterPath="$PROJECT_DIR$/src/Images/SidebarLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/pintrest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/FooterStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footnote.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/components.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/HomeStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/HomeStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Pa" />
         <option value="Parsa &lt;mo.parsa@yahoo.com&gt;" />
       </list>
     </option>
@@ -122,7 +125,7 @@
       <workItem from="1719374959542" duration="9446000" />
       <workItem from="1719406402713" duration="3871000" />
       <workItem from="1719467618451" duration="2722000" />
-      <workItem from="1719481798146" duration="1438000" />
+      <workItem from="1719481798146" duration="12333000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -156,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719389279829</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sidebar Complete">
+      <option name="closed" value="true" />
+      <created>1719483407848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719483407848</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +190,8 @@
     <MESSAGE value="Navbar(update)" />
     <MESSAGE value="Sidebar" />
     <MESSAGE value="Sidebar Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sidebar Complete" />
+    <MESSAGE value="Footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Footer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

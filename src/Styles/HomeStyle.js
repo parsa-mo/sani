@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
+  display: block;
   position: relative;
   top: 0;
   justify-content: center;
