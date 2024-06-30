@@ -7,7 +7,7 @@ const NavContainer = styled.nav`
     255,
     255,
     255,
-    0.025
+    0
   ); /* Minimal white background for visibility */
   backdrop-filter: blur(2px); /* Blur effect */
   display: flex;
@@ -35,7 +35,7 @@ const NavLinksContainer = styled.ul`
 
 const NavList = styled.li`
   list-style: none; /* Removes default list style */
-  margin-left: 40px; /* Adjust spacing between links */
+  margin-left: 30px; /* Adjust spacing between links */
 `;
 
 const NavButton = styled.button`

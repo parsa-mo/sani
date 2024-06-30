@@ -78,15 +78,15 @@ const Footer = () => {
         <SecondaryContainer>
           <StyledDiv>
             <a href={"https://www.instagram.com/sani.fashionstudio/"}>
-              <FooterIcon src={instagram} />{" "}
+              <FooterIcon src={instagram} style={{ width: "1.5rem" }} />{" "}
             </a>
             <a
               href={"https://www.facebook.com/www.radafashion?mibextid=LQQJ4d"}
             >
-              <FooterIcon src={facebook} />{" "}
+              <FooterIcon src={facebook} style={{ width: "1.5rem" }} />{" "}
             </a>
             <a href={"https://www.pinterest.com.au/sani_fashionstudio/"}>
-              <FooterIcon src={pintrest} />{" "}
+              <FooterIcon src={pintrest} style={{ width: "1.5rem" }} />{" "}
             </a>
           </StyledDiv>
           <StyledDiv>

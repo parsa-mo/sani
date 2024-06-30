@@ -1,37 +1,37 @@
 const NavLinks = [
   {
     id: 1,
-    name: "Home",
+    name: "HOME",
     href: "/",
   },
   {
     id: 2,
-    name: "Fashion",
+    name: "FASHION",
     href: "/fashion",
   },
   {
     id: 3,
-    name: "Bridal",
+    name: "BRIDAL",
     href: "/bridal",
   },
   {
     id: 4,
-    name: "Gallery",
+    name: "GALLERY",
     href: "/gallery",
   },
   {
     id: 5,
-    name: "About Us",
+    name: "ABOUT US",
     href: "/aboutus",
   },
   {
     id: 6,
-    name: "Contact Us",
+    name: "CONTACT US",
     href: "/contactus",
   },
   {
     id: 7,
-    name: "Feedback",
+    name: "FEEDBACK",
     href: "/feedback",
   },
 ];

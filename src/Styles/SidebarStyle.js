@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const SidebarContainer = styled.div`
   padding: 20px 25px;
   list-style-type: none;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(2px);
   display: flex;
   justify-content: space-between;
