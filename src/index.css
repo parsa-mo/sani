@@ -27,6 +27,11 @@ a {
     background: rgba(103, 103, 103, 0.2) !important;
 }
 
+/* Home Page portals zoom affect */
+.zoom-parent .zoom-image {
+    transform: scale(1.05);
+    transition: transform 1s ease-in-out;
+}
 
 
 

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import backgroundImg from "../Images/HomeBackground.jpeg";
 
-const Container = styled.div`
+const TopContainer = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -29,7 +29,7 @@ const Container = styled.div`
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  //box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -39,4 +39,4 @@ const Div = styled.div`
   z-index: 1;
 `;
 
-export { Div, Container };
+export { Div, TopContainer };
