@@ -9,6 +9,7 @@ import {
   FooterIcon,
   BottomLine,
   SecondaryContainer,
+  myStyle,
 } from "../Styles/FooterStyle";
 import sanilogo from "../Images/sanilogo.png";
 import call from "../Images/call.png";
@@ -91,7 +92,7 @@ const Footer = () => {
           </StyledDiv>
           <StyledDiv>
             {" "}
-            <DivItem style={{ paddingLeft: "52px" }}>
+            <DivItem style={myStyle}>
               Copyright ©{currentYear} Sani{" "}
             </DivItem>{" "}
           </StyledDiv>

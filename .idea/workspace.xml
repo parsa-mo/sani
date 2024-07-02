@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/HomeStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/HomeStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/FooterStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/FooterStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,8 @@
       <workItem from="1719726665840" duration="12598000" />
       <workItem from="1719750877051" duration="1581000" />
       <workItem from="1719758059235" duration="2183000" />
-      <workItem from="1719822849029" duration="7687000" />
+      <workItem from="1719822849029" duration="7922000" />
+      <workItem from="1719906411870" duration="1307000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -187,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719739866400</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Homepage portals">
+      <option name="closed" value="true" />
+      <created>1719830678479</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719830678479</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +219,8 @@
     <MESSAGE value="Sidebar Complete" />
     <MESSAGE value="Footer" />
     <MESSAGE value="Homepage title &amp; button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage title &amp; button" />
+    <MESSAGE value="Homepage portals" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homepage portals" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

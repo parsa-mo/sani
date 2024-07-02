@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const MainContainer = styled.div`
   height: 300px;
@@ -10,15 +11,22 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media (max-width: 950px) {
+    height: auto;
+    padding-top: 2rem;
+  }
 `;
 
 const SecondaryContainer = styled.div`
   display: flex;
   justify-content: center;
-  @media (max-width: 750px) {
+  @media (max-width: 950px) {
     flex-direction: column;
-    height: 1000px;
+    //height: 1000px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
@@ -40,6 +48,11 @@ const DivItem = styled.div`
   font-weight: 300;
   display: flex;
   align-items: center; /* Ensure vertical alignment */
+  @media (max-width: 950px) {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const TopLine = styled.hr`
@@ -55,7 +68,7 @@ const BottomLine = styled.hr`
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  width: 500px;
+  width: 50%;
   padding-top: 15px;
 `;
 
@@ -65,8 +78,16 @@ const StyledLogo = styled.img`
 
 const FooterIcon = styled.img`
   display: inline-block;
-  padding-right: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
   width: 1rem;
+`;
+
+const myStyle = css`
+  padding-left: 5rem;
+
+  @media (max-width: 950px) {
+    padding-right: 0;
+  }
 `;
 
 export {
@@ -79,4 +100,5 @@ export {
   FooterIcon,
   BottomLine,
   SecondaryContainer,
+  myStyle,
 };
