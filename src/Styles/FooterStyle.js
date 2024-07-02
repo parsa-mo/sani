@@ -56,7 +56,7 @@ const DivItem = styled.div`
 `;
 
 const TopLine = styled.hr`
-  border-top: 50px solid rgb(18, 17, 17);
+  border-top: 50px solid rgb(19, 19, 19);
   border-bottom: 0;
   border-right: 0;
   border-left: 0;

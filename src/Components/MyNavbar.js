@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanilogo from "../Images/sanilogo.png";
 import {
+  NavBackground,
   NavLogo,
   NavContainer,
   NavList,
@@ -40,17 +41,28 @@ const MyNavbar = () => {
   // Update pageId when location.pathname changes
   useEffect(() => {
     const pathname = location.pathname;
+    console.log(pathname);
     const matchingLink = NavLinks.find((link) => link.href === pathname);
     if (matchingLink) {
       setPageId(matchingLink.id);
     }
   }, [location]);
 
+  const navContainerStyle =
+    location.pathname !== "/"
+      ? { backgroundColor: "#1d1d1d", boxShadow: "0 4px 4px -2px black" }
+      : {};
+
+  const navLinkStyle =
+    location.pathname !== "/"
+      ? { color: "#ad9e75" }
+      : { color: "rgba(255, 255, 255, 0.75)" };
+
   if (!navbar) {
-    return <Sidebar></Sidebar>;
+    return <Sidebar />;
   } else {
     return (
-      <NavContainer>
+      <NavContainer style={navContainerStyle}>
         <NavLink to="/">
           <NavLogo src={sanilogo} alt="logo" />
         </NavLink>
@@ -63,7 +75,7 @@ const MyNavbar = () => {
                 <NavLink
                   to={link.href}
                   style={{
-                    color: "rgba(255, 255, 255, 0.75)",
+                    ...navLinkStyle,
                     fontSize: "1rem",
                     textAlign: "center",
                     display: "block",

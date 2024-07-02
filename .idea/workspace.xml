@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Styles/AboutUsStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AboutUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AboutUs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/FooterStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/FooterStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +135,7 @@
       <workItem from="1719750877051" duration="1581000" />
       <workItem from="1719758059235" duration="2183000" />
       <workItem from="1719822849029" duration="7922000" />
-      <workItem from="1719906411870" duration="1307000" />
+      <workItem from="1719906411870" duration="8928000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -194,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719830678479</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Footer Mobile Responsive now&#10;Homepage Complete">
+      <option name="closed" value="true" />
+      <created>1719907802576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719907802576</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +235,8 @@
     <MESSAGE value="Footer" />
     <MESSAGE value="Homepage title &amp; button" />
     <MESSAGE value="Homepage portals" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage portals" />
+    <MESSAGE value="Footer Mobile Responsive now&#10;Homepage Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Footer Mobile Responsive now&#10;Homepage Complete" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

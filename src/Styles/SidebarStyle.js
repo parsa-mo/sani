@@ -3,7 +3,7 @@ import { Theme } from "./Theme";
 import { NavLink } from "react-router-dom";
 
 const SidebarContainer = styled.div`
-  padding: 20px 25px;
+  padding: 25px 40px;
   list-style-type: none;
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(2px);
@@ -14,6 +14,7 @@ const SidebarContainer = styled.div`
   z-index: 10;
   left: 0;
   right: 0;
+  box-shadow: 0 4px 4px -3px black;
 `;
 
 const SidebarLogos = styled.img`

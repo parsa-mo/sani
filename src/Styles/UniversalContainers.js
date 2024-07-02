@@ -39,4 +39,27 @@ const Div = styled.div`
   z-index: 1;
 `;
 
-export { Div, TopContainer };
+const Title = styled.h1`
+  padding-top: 4rem;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ad9e75;
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+`;
+
+const Paragraph = styled.p`
+  padding-top: 2rem;
+  color: #ffffff;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  @media (max-width: 800px) {
+    font-size: 0.9rem;
+  }
+`;
+
+export { Div, TopContainer, Title, Paragraph };

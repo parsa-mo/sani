@@ -53,15 +53,15 @@ const Home = () => {
               onMouseLeave={handleMouseLeave}
             >
               <PortalImage src={fashion} alt="fashion"></PortalImage>
-              <NavLink to="/fashion">
-                <PortalButton>Fashion</PortalButton>
+              <NavLink to="/gallery">
+                <PortalButton>Gallery</PortalButton>
               </NavLink>
             </PortalImageWrapper>
             <PortalImageWrapper
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <PortalImage src={weddingDress} alt="fashion"></PortalImage>
+              <PortalImage src={weddingDress} alt="bridal"></PortalImage>
               <NavLink to="/bridal">
                 <PortalButton>Bridal</PortalButton>
               </NavLink>
@@ -71,8 +71,8 @@ const Home = () => {
               onMouseLeave={handleMouseLeave}
             >
               <PortalImage src={Gallery} alt="fashion"></PortalImage>
-              <NavLink to="/gallery">
-                <PortalButton>Gallery</PortalButton>
+              <NavLink to="/accessories">
+                <PortalButton>Accessories</PortalButton>
               </NavLink>
             </PortalImageWrapper>
           </PortalDiv>

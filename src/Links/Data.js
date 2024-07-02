@@ -6,8 +6,8 @@ const NavLinks = [
   },
   {
     id: 2,
-    name: "FASHION",
-    href: "/fashion",
+    name: "ACCESSORIES",
+    href: "/accessories",
   },
   {
     id: 3,
@@ -28,11 +28,6 @@ const NavLinks = [
     id: 6,
     name: "CONTACT US",
     href: "/contactus",
-  },
-  {
-    id: 7,
-    name: "FEEDBACK",
-    href: "/feedback",
   },
 ];
 
