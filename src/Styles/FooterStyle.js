@@ -68,7 +68,7 @@ const BottomLine = styled.hr`
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  width: 50%;
+  width: 42%;
   padding-top: 15px;
 `;
 

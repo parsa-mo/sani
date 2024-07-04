@@ -22,12 +22,12 @@ const NavLinks = [
   {
     id: 5,
     name: "ABOUT US",
-    href: "/aboutus",
+    href: "/about-us",
   },
   {
     id: 6,
     name: "CONTACT US",
-    href: "/contactus",
+    href: "/contact-us",
   },
 ];
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanilogo from "../Images/sanilogo.png";
 import {
-  NavBackground,
   NavLogo,
   NavContainer,
   NavList,
@@ -41,7 +40,6 @@ const MyNavbar = () => {
   // Update pageId when location.pathname changes
   useEffect(() => {
     const pathname = location.pathname;
-    console.log(pathname);
     const matchingLink = NavLinks.find((link) => link.href === pathname);
     if (matchingLink) {
       setPageId(matchingLink.id);

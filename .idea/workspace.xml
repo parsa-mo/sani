@@ -4,17 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Styles/AboutUsStyle.js" afterDir="false" />
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Embed Map &#10;Finish ContactUs.js">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/ContactUs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/FormStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/components.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AboutUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AboutUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/AboutUsStyle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/FooterStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/FooterStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/SidebarStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/UniversalContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +41,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Parsa &lt;mo.parsa@yahoo.com&gt;" />
         <option value="Pa" />
+        <option value="Parsa &lt;mo.parsa@yahoo.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,6 +94,7 @@
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Parsa\IdeaProjects\sani" />
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Images" />
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src" />
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Styles" />
@@ -135,7 +146,14 @@
       <workItem from="1719750877051" duration="1581000" />
       <workItem from="1719758059235" duration="2183000" />
       <workItem from="1719822849029" duration="7922000" />
-      <workItem from="1719906411870" duration="8928000" />
+      <workItem from="1719906411870" duration="10029000" />
+      <workItem from="1719933210642" duration="3538000" />
+      <workItem from="1719997060188" duration="565000" />
+      <workItem from="1720002321639" duration="9171000" />
+      <workItem from="1720014645939" duration="4361000" />
+      <workItem from="1720019517650" duration="11000" />
+      <workItem from="1720019536139" duration="128000" />
+      <workItem from="1720075198637" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -209,11 +227,22 @@
       <option name="project" value="LOCAL" />
       <updated>1719907802576</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="About Us Page">
+      <option name="closed" value="true" />
+      <created>1719923248991</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719923248991</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -236,7 +265,8 @@
     <MESSAGE value="Homepage title &amp; button" />
     <MESSAGE value="Homepage portals" />
     <MESSAGE value="Footer Mobile Responsive now&#10;Homepage Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Footer Mobile Responsive now&#10;Homepage Complete" />
+    <MESSAGE value="About Us Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="About Us Page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
