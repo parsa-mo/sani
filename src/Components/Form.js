@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
   FormButton,
@@ -8,36 +8,41 @@ import {
   FormLabel,
   FormTextArea,
 } from "../Styles/FormStyles";
+import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm("service_7bvu66v", "template_xxch7rh", form.current, {
         publicKey: "Rc-d2rmQiwgZIMK-j",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          enqueueSnackbar("Form Submitted Successfully.", {
+            variant: "success",
+          });
+          form.current[0].value = "";
+          form.current[1].value = "";
+          form.current[2].value = "";
+          form.current[3].value = "";
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          enqueueSnackbar(`FAILED...${error.text}`, { variant: "error" });
         },
       );
   };
 
   return (
     <FormContainer id="myForm" ref={form} onSubmit={sendEmail}>
+      <SnackbarProvider
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+      />
       <FormField>
         <FormLabel htmlFor="name">Name*</FormLabel>
         <FormInput type="text" name="name" placeholder="Name" required />
