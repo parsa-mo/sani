@@ -60,6 +60,9 @@ const FormButton = styled.button`
   &:hover {
     background-color: #8c7a5a;
   }
+  &:active {
+    color: azure;
+  }
 `;
 
 export {

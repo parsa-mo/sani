@@ -5,6 +5,7 @@ const Container = styled.div`
   overflow: hidden;
   flex-direction: row;
   box-sizing: border-box;
+  min-height: 100vh;
   height: auto;
   align-items: flex-start;
   justify-content: space-evenly;

@@ -38,6 +38,8 @@ const ContactForm = () => {
   return (
     <FormContainer id="myForm" ref={form} onSubmit={sendEmail}>
       <SnackbarProvider
+        autoHideDuration={2000}
+        maxSnack={2}
         anchorOrigin={{
           vertical: "top",
           horizontal: "center",
