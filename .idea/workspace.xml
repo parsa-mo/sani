@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Untrack .env">
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/sendEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ContactUs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +72,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Parsa\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
@@ -80,6 +89,23 @@
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src" />
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Styles" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -135,7 +161,19 @@
       <workItem from="1720019517650" duration="11000" />
       <workItem from="1720019536139" duration="128000" />
       <workItem from="1720075198637" duration="1067000" />
-      <workItem from="1720078090768" duration="133000" />
+      <workItem from="1720078090768" duration="935000" />
+      <workItem from="1720080685003" duration="3320000" />
+      <workItem from="1720087098018" duration="727000" />
+      <workItem from="1720088133689" duration="298000" />
+      <workItem from="1720089051645" duration="638000" />
+      <workItem from="1720092807697" duration="2303000" />
+      <workItem from="1720099552157" duration="2477000" />
+      <workItem from="1720155210890" duration="6000" />
+      <workItem from="1720156819914" duration="9000" />
+      <workItem from="1720157625359" duration="12000" />
+      <workItem from="1720161702217" duration="10000" />
+      <workItem from="1720262799048" duration="105000" />
+      <workItem from="1720339835384" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -233,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720076143076</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change API">
+      <option name="closed" value="true" />
+      <created>1720078298283</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720078298283</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +313,8 @@
     <MESSAGE value="Embed Map &#10;Finish ContactUs.js" />
     <MESSAGE value="Finish Map" />
     <MESSAGE value="Untrack .env" />
-    <option name="LAST_COMMIT_MESSAGE" value="Untrack .env" />
+    <MESSAGE value="Change API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change API" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

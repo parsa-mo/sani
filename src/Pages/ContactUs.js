@@ -15,7 +15,6 @@ import { Form } from "../Components/components";
 
 const ContactUs = () => {
   const apiKey = process.env.REACT_APP_MAP_API;
-  console.log(apiKey);
   return (
     <>
       <Container>

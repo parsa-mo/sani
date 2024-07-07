@@ -25,7 +25,7 @@ const Sidebar = () => {
     <>
       <SidebarContainer>
         <NavLink to="/">
-          <SidebarLogos key={1} src={sanilogo} alt="logo" />
+          <SidebarLogos key={1} src={sanilogo} alt="logo" t />
         </NavLink>
         <SidebarLogos
           key={2}
