@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="" />
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Finish">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.5f0b0503.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.5f0b0503.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/453.f9c5d0cb.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/453.f9c5d0cb.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/HomeBackground.e7c8a00442b027275436.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/aboutUS.91b1002acc439a062273.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/fashion.85b33a2654e255913585.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/media/weddingDress.e5ecad29531a06401a9d.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
