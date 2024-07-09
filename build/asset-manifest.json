@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f0b0503.css",
+    "main.js": "/static/js/main.b6c1be02.js",
+    "static/js/453.f9c5d0cb.chunk.js": "/static/js/453.f9c5d0cb.chunk.js",
+    "static/media/fashion.jpeg": "/static/media/fashion.85b33a2654e255913585.jpeg",
+    "static/media/HomeBackground.jpeg": "/static/media/HomeBackground.e7c8a00442b027275436.jpeg",
+    "static/media/aboutUS.jpg": "/static/media/aboutUS.91b1002acc439a062273.jpg",
+    "static/media/weddingDress.jpg": "/static/media/weddingDress.e5ecad29531a06401a9d.jpg",
+    "index.html": "/index.html",
+    "main.5f0b0503.css.map": "/static/css/main.5f0b0503.css.map",
+    "main.b6c1be02.js.map": "/static/js/main.b6c1be02.js.map",
+    "453.f9c5d0cb.chunk.js.map": "/static/js/453.f9c5d0cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f0b0503.css",
+    "static/js/main.b6c1be02.js"
+  ]
+}
