@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/FetchImages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/ImageGalleryStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Bridal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Bridal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/ImageGalleryStyle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/PagesStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +178,7 @@
       <workItem from="1720422024150" duration="1000" />
       <workItem from="1720426506025" duration="13597000" />
       <workItem from="1720490806910" duration="1000" />
-      <workItem from="1720505559360" duration="9300000" />
+      <workItem from="1720505559360" duration="12665000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -328,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720346517237</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="All pages done">
+      <option name="closed" value="true" />
+      <created>1720518249914</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720518249914</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +371,8 @@
     <MESSAGE value="Form Notification Styling&#10;Form Clear after submitt" />
     <MESSAGE value="Error Page&#10;Form notification styling" />
     <MESSAGE value="Delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete" />
+    <MESSAGE value="All pages done" />
+    <option name="LAST_COMMIT_MESSAGE" value="All pages done" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,13 +1,13 @@
 import React from "react";
 import { Div, Title, Paragraph } from "../Styles/PagesStyle";
-import { MainContainer } from "../Styles/ImageGalleryStyle";
+import { MainContainer } from "../Styles/GalleryLoaderStyle";
 import GalleryLoader from "../Components/GalleryLoader";
 
 const Gallery = () => {
   return (
     <MainContainer>
       <Div>
-        <Title>Bridal</Title>
+        <Title>Gallery</Title>
         <Paragraph>
           Sani carry a range of breathtaking pre-designed garments for clients
           to choose from, and have adjusted to fit them perfectly. A magnificent

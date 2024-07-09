@@ -1,6 +1,6 @@
 import React from "react";
 import { Div, Title, Paragraph } from "../Styles/PagesStyle";
-import { MainContainer } from "../Styles/ImageGalleryStyle";
+import { MainContainer } from "../Styles/GalleryLoaderStyle";
 import GalleryLoader from "../Components/GalleryLoader";
 
 const Bridal = () => {

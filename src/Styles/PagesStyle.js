@@ -25,7 +25,7 @@ const Div = styled.div`
   display: block;
   padding: 6rem 6rem 3rem 6rem;
   @media (max-width: 1100px) {
-    padding: 4rem 3rem 3rem 3rem;
+    padding: 6rem 3rem 3rem 3rem;
   }
 `;
 
@@ -58,7 +58,6 @@ const ContactDetail = styled.span`
 const Paragraph = styled.p`
   padding-top: 1rem;
   color: #ffffff;
-  font-weight: lighter;
   letter-spacing: 0.5px;
   line-height: 1.5rem;
   font-size: 1.2rem;
