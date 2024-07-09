@@ -45,7 +45,7 @@ const Footer = () => {
             </DivItem>
             <DivItem>
               <FooterIcon src={call} alt={"call"} />
-              0426242850
+              0406212428
             </DivItem>
           </StyledDiv>
 

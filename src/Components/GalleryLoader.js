@@ -36,10 +36,13 @@ const GalleryLoader = ({ FolderName }) => {
     caption: photo.title || "", // Ensure caption is defined or empty string
   }));
 
+  // Reverse the photos array and map from the end backwards
+  const reversedPhotos = [...photos].reverse();
+
   return (
     <Container>
       <ImageContainer>
-        {photos.map((photo, index) => (
+        {reversedPhotos.map((photo, index) => (
           <div key={index}>
             <Img
               src={photo.url}

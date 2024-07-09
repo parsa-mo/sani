@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="Finish">
+    <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.5f0b0503.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.5f0b0503.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/453.f9c5d0cb.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/453.f9c5d0cb.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.b6c1be02.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/HomeBackground.e7c8a00442b027275436.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/aboutUS.91b1002acc439a062273.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/fashion.85b33a2654e255913585.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/weddingDress.e5ecad29531a06401a9d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +60,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/Desktop/Codes/React_Tutorials/react-router6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/IdeaProjects/sani_build&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -82,6 +68,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Parsa\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
@@ -100,7 +87,17 @@
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Styles" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -113,6 +110,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -189,6 +187,11 @@
       <workItem from="1720426506025" duration="13597000" />
       <workItem from="1720490806910" duration="1000" />
       <workItem from="1720505559360" duration="13122000" />
+      <workItem from="1720528486465" duration="1000" />
+      <workItem from="1720529472829" duration="503000" />
+      <workItem from="1720529994254" duration="188000" />
+      <workItem from="1720530216697" duration="1275000" />
+      <workItem from="1720532769974" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -350,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720521516155</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finish">
+      <option name="closed" value="true" />
+      <created>1720526076688</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1720526076688</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
