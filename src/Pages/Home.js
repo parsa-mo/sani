@@ -12,7 +12,7 @@ import {
 import { NavLink } from "react-router-dom";
 import weddingDress from "../Images/weddingDress.jpg";
 import fashion from "../Images/fashion.jpeg";
-import Gallery from "../Images/Gallery.jpeg";
+// import Gallery from "../Images/Gallery.jpeg";
 
 const Home = () => {
   const handleMouseEnter = (e) => {
@@ -66,15 +66,15 @@ const Home = () => {
                 <PortalButton>Bridal</PortalButton>
               </NavLink>
             </PortalImageWrapper>
-            <PortalImageWrapper
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <PortalImage src={Gallery} alt="fashion"></PortalImage>
-              <NavLink to="/accessories">
-                <PortalButton>Accessories</PortalButton>
-              </NavLink>
-            </PortalImageWrapper>
+            {/*<PortalImageWrapper*/}
+            {/*  onMouseEnter={handleMouseEnter}*/}
+            {/*  onMouseLeave={handleMouseLeave}*/}
+            {/*>*/}
+            {/*  <PortalImage src={Gallery} alt="fashion"></PortalImage>*/}
+            {/*  <NavLink to="/accessories">*/}
+            {/*    <PortalButton>Accessories</PortalButton>*/}
+            {/*  </NavLink>*/}
+            {/*</PortalImageWrapper>*/}
           </PortalDiv>
         </HomeContainer>
       </main>

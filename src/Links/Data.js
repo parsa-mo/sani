@@ -4,11 +4,11 @@ const NavLinks = [
     name: "HOME",
     href: "/",
   },
-  {
-    id: 2,
-    name: "ACCESSORIES",
-    href: "/accessories",
-  },
+  // {
+  //   id: 2,
+  //   name: "ACCESSORIES",
+  //   href: "/accessories",
+  // },
   {
     id: 3,
     name: "BRIDAL",

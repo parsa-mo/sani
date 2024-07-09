@@ -9,7 +9,7 @@ const Container = styled.div`
   height: auto;
   align-items: flex-start;
   justify-content: space-evenly;
-  padding-top: 8rem;
+  padding: 8rem;
   background: #222121ff;
   position: relative;
 
@@ -22,9 +22,10 @@ const Container = styled.div`
 
 const Div = styled.div`
   box-sizing: border-box;
-  padding: 6rem 4rem 6rem 4rem;
+  display: block;
+  padding: 6rem 6rem 3rem 6rem;
   @media (max-width: 1100px) {
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 4rem 3rem 3rem 3rem;
   }
 `;
 
