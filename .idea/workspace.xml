@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Images/accessories.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Accessories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Accessories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/PagesStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +68,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/IdeaProjects/sani_build&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Parsa/IdeaProjects/sani/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -78,6 +86,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Parsa\IdeaProjects\sani\public" />
       <recent name="C:\Users\Parsa\IdeaProjects\sani\src\Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -191,7 +200,14 @@
       <workItem from="1720529472829" duration="503000" />
       <workItem from="1720529994254" duration="188000" />
       <workItem from="1720530216697" duration="1275000" />
-      <workItem from="1720532769974" duration="332000" />
+      <workItem from="1720532769974" duration="596000" />
+      <workItem from="1720533697366" duration="197000" />
+      <workItem from="1720535983138" duration="506000" />
+      <workItem from="1720583454826" duration="371000" />
+      <workItem from="1720684486273" duration="1330000" />
+      <workItem from="1720700670223" duration="229000" />
+      <workItem from="1720751435219" duration="1204000" />
+      <workItem from="1730189379443" duration="3275000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -361,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720526076688</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update GalleryLoader.js">
+      <option name="closed" value="true" />
+      <created>1720533162813</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1720533162813</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +426,8 @@
     <MESSAGE value="Delete" />
     <MESSAGE value="All pages done" />
     <MESSAGE value="Finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
+    <MESSAGE value="update GalleryLoader.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="update GalleryLoader.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

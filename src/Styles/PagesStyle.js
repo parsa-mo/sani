@@ -14,9 +14,13 @@ const Container = styled.div`
   position: relative;
 
   @media (max-width: 1100px) {
-    padding-top: 6rem;
+    padding: 6rem 4rem 4rem 4rem;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (max-width: 500px) {
+    padding: 6rem 0 0 0;
   }
 `;
 
@@ -26,6 +30,9 @@ const Div = styled.div`
   padding: 6rem 6rem 3rem 6rem;
   @media (max-width: 1100px) {
     padding: 6rem 3rem 3rem 3rem;
+  }
+  @media (max-width: 500px) {
+    padding: 4rem 3rem 2rem 3rem;
   }
 `;
 

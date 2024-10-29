@@ -40,7 +40,9 @@ const Sidebar = () => {
         {NavLinks.map((link) => (
           <SidebarList key={link.id}>
             <SidebarListItem>
-              <StyledNavLink to={link.href}>{link.name}</StyledNavLink>
+              <StyledNavLink onClick={handleClick} to={link.href}>
+                {link.name}
+              </StyledNavLink>
             </SidebarListItem>
           </SidebarList>
         ))}

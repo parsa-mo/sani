@@ -14,14 +14,11 @@ const MainContainer = styled.div`
   position: relative;
 
   @media (max-width: 1100px) {
-    padding-top: 6rem;
+    padding: 6rem 4rem 4rem 4rem;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (max-width: 1100px) {
-    padding: 6rem 4rem 4rem 4rem;
-  }
   @media (max-width: 500px) {
     padding: 6rem 0 0 0;
   }
