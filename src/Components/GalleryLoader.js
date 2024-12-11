@@ -2,11 +2,13 @@ import React, { useState, useEffect, useCallback } from "react";
 import { FetchImages } from "./FetchImages";
 import { Container, ImageContainer, Img } from "../Styles/GalleryLoaderStyle";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import { Divider } from "../Styles/PagesStyle";
 
-const GalleryLoader = ({ FolderName }) => {
+const GalleryLoader = ({ FolderName, Filters }) => {
   const [photos, setPhotos] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [reversedPhotos, setReversedPhotos] = useState([]);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
@@ -18,6 +20,7 @@ const GalleryLoader = ({ FolderName }) => {
     setViewerIsOpen(false);
   };
 
+  // Fetch photos when FolderName changes
   useEffect(() => {
     FetchImages(FolderName)
       .then((fetchedPhotos) => {
@@ -27,8 +30,18 @@ const GalleryLoader = ({ FolderName }) => {
         console.error("Error fetching images:", error);
       });
   }, [FolderName]);
-  // Reverse the photos array and map from the end backwards
-  const reversedPhotos = [...photos].reverse();
+
+  // Update reversedPhotos based on photos and Filters
+  useEffect(() => {
+    let filteredPhotos = [...photos].reverse(); // Start with reversed photos
+    if (Filters && Filters.length > 0) {
+      filteredPhotos = filteredPhotos.filter(
+        (photo) => Filters.some((filter) => photo.url.includes(filter)), // Assuming 'url' contains the filterable text
+      );
+    }
+    setReversedPhotos(filteredPhotos);
+  }, [photos, Filters]);
+
   // Ensure photos have necessary properties for Carousel views
   const carouselViews = reversedPhotos.map((photo) => ({
     ...photo,
@@ -39,6 +52,7 @@ const GalleryLoader = ({ FolderName }) => {
 
   return (
     <Container>
+      <Divider />
       <ImageContainer>
         {reversedPhotos.map((photo, index) => (
           <div key={index}>

@@ -42,7 +42,7 @@ const ImageContainer = styled.div`
 const Img = styled.img`
   width: 25vw; /* Adjust width to account for padding */
   height: auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   background-color: white;
   margin-bottom: 1rem; /* Ensure margin is only applied to the bottom */
   display: block;
@@ -58,4 +58,6 @@ const Img = styled.img`
   }
 `;
 
-export { Container, ImageContainer, Img, MainContainer };
+const Frame = styled.div``;
+
+export { Container, ImageContainer, Img, MainContainer, Frame };

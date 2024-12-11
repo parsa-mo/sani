@@ -58,6 +58,68 @@ a {
 }
 
 
+.carousel-container {
+    position: relative; /* Make the container relative for dot positioning */
+    max-width: 25vw; /* Matches the Img styling width */
+    margin: 0 auto;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25vw; /* Matches Img width */
+    position: relative; /* Ensure dot alignment inside each item */
+}
+
+.react-multi-carousel-dot-list {
+    position: absolute;
+    /*bottom: -40%; !* Position dots consistently 10px from the bottom of the carousel *!*/
+    left: 50%;
+    transform: translateY(-94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 5; /* Ensure dots appear above other content */
+}
+
+.react-multi-carousel-dot button {
+    background: rgb(69, 69, 69); /* Dot color */
+    border-radius: 50%;
+    width: 5px; /* Larger for better visibility */
+    height: 5px;
+    border: none;
+    margin: 0 5px;
+}
+
+.react-multi-carousel-dot--active button {
+}
+
+
+/*Folder Page Carousel Styles*/
+.bridal-folder-carousel {
+    max-width: 40vw; /* Expands the carousel container */
+    margin: 0 auto; /* Centers the carousel */
+    position: relative; /* Keeps dots and arrows properly aligned */
+    flex: 1; /* Allow the carousel to expand within the flex container */
+    width: 100%;
+    display: block; /* Override potential flexbox conflicts in carousel styles */
+}
+
+.bridal-folder-carousel-item {
+    justify-content: center;
+    align-items: center;
+    max-width: 40vw; /* Matches the carousel width */
+    display: block; /* Ensure items stack properly */
+    width: 100%;
+}
+
+
+
+
+
 
 
 

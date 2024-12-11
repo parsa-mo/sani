@@ -7,6 +7,7 @@ import {
   Bridal,
   Gallery,
   Accessories,
+  BridalFolderPage,
 } from "./Pages/Pages.js";
 import { MyNavbar, Footer } from "./Components/components";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path={"/about-us"} element={<AboutUs />}></Route>
         <Route path={"/contact-us"} element={<ContactUs />}></Route>
         <Route path={"/bridal"} element={<Bridal />}></Route>
+        <Route path="/bridal/:foldername" element={<BridalFolderPage />} />
         <Route path={"/accessories"} element={<Accessories />}></Route>
         <Route path={"/Gallery"} element={<Gallery />}></Route>
         <Route path="*" element={<Error />}></Route>

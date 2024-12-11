@@ -1,7 +1,7 @@
 import React from "react";
 import { Div, Title, Paragraph } from "../Styles/PagesStyle";
 import { MainContainer } from "../Styles/GalleryLoaderStyle";
-import GalleryLoader from "../Components/GalleryLoader";
+import GalleryLoaderWithCarousel from "../Components/GalleryLoaderWithCarousel";
 
 const Bridal = () => {
   return (
@@ -25,7 +25,7 @@ const Bridal = () => {
           we can help transform a dress into THE WEDDING DRESS OF YOUR DREAMS!
         </Paragraph>
       </Div>
-      <GalleryLoader FolderName={"Bridal"} />
+      <GalleryLoaderWithCarousel FolderName={"Bridal"} />
     </MainContainer>
   );
 };

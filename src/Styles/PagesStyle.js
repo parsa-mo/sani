@@ -81,4 +81,63 @@ const Icon = styled.img`
   }
 `;
 
-export { Container, ContactDetail, StyledImg, Title, Paragraph, Icon, Div };
+const Divider = styled.hr`
+  width: 100%;
+  margin-bottom: 40px;
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+`;
+
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: ${({ active }) => (active ? "#7c6a4f" : "#ad9e75")};
+  font-weight: normal;
+  border: none;
+  border-radius: 4px;
+  cursor: ${({ active }) => (active ? "default" : "pointer")};
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  border-radius: 12px;
+`;
+
+const CloseIcon = styled.span`
+  display: ${({ active }) => (active ? "flex" : "none")};
+  align-items: center; /* Vertically center the cross */
+  justify-content: center; /* Horizontally center the cross */
+  font-size: 1.8rem;
+  margin-left: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  line-height: 0.5; /* Prevent extra height from line spacing */
+  vertical-align: middle; /* Align with the text baseline */
+  height: auto; /* Prevent height from expanding */
+  overflow: hidden; /* Ensure no overflow from the span */
+`;
+
+export {
+  Container,
+  ContactDetail,
+  StyledImg,
+  Title,
+  Paragraph,
+  Icon,
+  Div,
+  Divider,
+  ButtonDiv,
+  Button,
+  CloseIcon,
+};

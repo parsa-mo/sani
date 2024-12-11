@@ -67,23 +67,25 @@ const MyNavbar = () => {
         <NavLinksContainer>
           {NavLinks.map((link) => (
             <NavList key={link.id}>
-              <NavButton
-                className={pageId === link.id ? "ActiveNavButton" : ""}
+              <NavLink
+                to={link.href}
+                end={link.href === "/"} // If you want the homepage link to only match exactly "/"
+                style={{
+                  ...navLinkStyle,
+                  fontSize: "1rem",
+                  textAlign: "center",
+                  display: "block",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  padding: "10px",
+                  borderRadius: "5px",
+                }}
+                className={({ isActive }) =>
+                  isActive ? "ActiveNavButton" : ""
+                }
               >
-                <NavLink
-                  to={link.href}
-                  style={{
-                    ...navLinkStyle,
-                    fontSize: "1rem",
-                    textAlign: "center",
-                    display: "block",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                  }}
-                >
-                  {link.name}
-                </NavLink>
-              </NavButton>
+                {link.name}
+              </NavLink>
             </NavList>
           ))}
         </NavLinksContainer>
