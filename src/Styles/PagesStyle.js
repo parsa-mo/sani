@@ -47,18 +47,10 @@ const Title = styled.h1`
   font-size: 2.2rem;
   font-weight: bold;
   color: #ad9e75;
-  @media (max-width: 800px) {
-    font-size: 1.5rem;
-  }
-`;
 
-const ContactDetail = styled.span`
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem; /* Adjust as needed */
-  font-size: 1rem;
-  @media (max-width: 800px) {
-    font-size: 0.9rem;
+  @media (max-width: 600px) {
+    text-align: center; /* Center title for mobile */
+    font-size: 1.8rem; /* Reduce font size */
   }
 `;
 
@@ -68,6 +60,18 @@ const Paragraph = styled.p`
   letter-spacing: 0.5px;
   line-height: 1.5rem;
   font-size: 1.2rem;
+
+  @media (max-width: 600px) {
+    text-align: center; /* Center paragraphs for mobile */
+    font-size: 1rem; /* Adjust font size for better readability */
+  }
+`;
+
+const ContactDetail = styled.span`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* Adjust as needed */
+  font-size: 1rem;
   @media (max-width: 800px) {
     font-size: 0.9rem;
   }

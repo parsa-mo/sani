@@ -57,6 +57,7 @@ const GalleryLoader = ({ FolderName, Filters }) => {
         {reversedPhotos.map((photo, index) => (
           <div key={index}>
             <Img
+              style={{ padding: "0.5rem 0" }}
               src={photo.url}
               alt={`Photo ${index}`}
               onClick={(event) => openLightbox(event, { photo, index })}

@@ -5,6 +5,7 @@ import {
   Frame,
   ImageContainer,
   Img,
+  CarouselWrapper,
 } from "../Styles/GalleryLoaderStyle";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -23,75 +24,58 @@ const GalleryLoaderWithCarousel = ({ FolderName }) => {
     fetchData();
   }, [FolderName]);
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1, // Show one image per slide
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-
   return (
     <Container>
       <Divider />
-      {folders.map((folder, folderIndex) => (
-        <ImageContainer key={folderIndex}>
-          <div style={{ breakInside: "avoid" }}>
-            {" "}
-            {/* Prevent items from splitting across columns */}
+      <ImageContainer>
+        {folders.map((folder, folderIndex) => (
+          <CarouselWrapper key={folderIndex}>
             <Carousel
-              responsive={responsive}
+              responsive={{
+                desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+                tablet: { breakpoint: { max: 1024, min: 664 }, items: 1 },
+                mobile: { breakpoint: { max: 664, min: 0 }, items: 1 },
+              }}
               autoPlay
-              autoPlaySpeed={6000} // Time between image changes in milliseconds
+              autoPlaySpeed={6000}
               infinite
               showDots
-              arrows={false} // Remove navigation arrows
+              arrows={false}
               containerClass="carousel-container"
               itemClass="carousel-item"
               customTransition="transform 500ms ease-in-out"
               transitionDuration={500}
             >
               {folder.images
-                .filter((image) => !image.url.includes(".csv")) // Exclude CSV files
+                .filter((image) => !image.url.includes(".csv")) // Filter out CSV files
                 .map((image, index) => (
                   <Img
                     key={index}
                     src={image.url}
                     alt={image.alt}
-                    style={{ paddingBottom: "1.6rem" }}
-                    onClick={() => {
-                      navigate(`/bridal/${folder.folderName}`);
-                    }}
+                    onClick={() => navigate(`/bridal/${folder.folderName}`)}
                   />
                 ))}
             </Carousel>
             <Link
               to={`/bridal/${folder.folderName}`}
               style={{
-                position: "relative",
-                color: "#000000",
+                color: "#000",
                 textDecoration: "none",
                 fontSize: "1rem",
-                marginBottom: "1rem",
+                fontWeight: "bolder",
                 display: "block",
-                transform: "translateY(-192%)",
-                right: "-2%",
-                zIndex: "10",
-                width: "40%",
+                textAlign: "center",
+                padding: "0.5rem",
               }}
             >
-              {folder.folderName}
+              {folder.folderName
+                .split("_")[1]
+                ?.replace(/^\w/, (c) => c.toUpperCase()) || "Unknown"}
             </Link>
-          </div>
-        </ImageContainer>
-      ))}
+          </CarouselWrapper>
+        ))}
+      </ImageContainer>
     </Container>
   );
 };

@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cors.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/FetchImageFolders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MyNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Accessories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Accessories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Bridal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Bridal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/PagesStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -57,6 +48,9 @@
     &quot;accountId&quot;: &quot;55d2e630-9fd3-476b-9e0c-9cdec4a52cf3&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -218,7 +212,13 @@
       <workItem from="1733743050131" duration="3057000" />
       <workItem from="1733802765807" duration="18902000" />
       <workItem from="1733921388758" duration="968000" />
-      <workItem from="1733922376090" duration="2889000" />
+      <workItem from="1733922376090" duration="3702000" />
+      <workItem from="1733965971798" duration="26000" />
+      <workItem from="1734001963032" duration="371000" />
+      <workItem from="1735634111899" duration="805000" />
+      <workItem from="1735990259068" duration="2858000" />
+      <workItem from="1736084592937" duration="3000" />
+      <workItem from="1736152911676" duration="5598000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -404,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730194297821</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="finish bridal plugin">
+      <option name="closed" value="true" />
+      <created>1733926125689</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733926125689</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +454,8 @@
     <MESSAGE value="All pages done" />
     <MESSAGE value="Finish" />
     <MESSAGE value="update GalleryLoader.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="update GalleryLoader.js" />
+    <MESSAGE value="finish bridal plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish bridal plugin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

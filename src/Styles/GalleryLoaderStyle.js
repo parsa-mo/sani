@@ -31,33 +31,54 @@ const Container = styled.div`
   //background-color: white;
 `;
 
-const ImageContainer = styled.div`
-  column-count: 3;
-  column-gap: 1rem;
+const CarouselWrapper = styled.div`
+  break-inside: avoid; /* Prevent carousels from breaking between columns */
+  margin-bottom: 2rem; /* Space between carousels */
+  background: #fff; /* Optional: Background for better visual debugging */
+  padding: 0; /* Remove internal spacing */
+  overflow: hidden; /* Ensure content does not overflow */
+
   @media (max-width: 500px) {
-    column-count: 1;
+    width: 80vw; /* Make carousel take up 90vw on small screens */
+  }
+`;
+
+const ImageContainer = styled.div`
+  column-count: 3; /* Create 3 masonry-style columns */
+  column-gap: 2rem; /* Space between columns */
+  margin: auto;
+
+  @media (max-width: 800px) {
+    column-count: 2; /* Reduce to 2 columns on medium screens */
+  }
+
+  @media (max-width: 500px) {
+    column-count: 1; /* Single column layout on small screens */
+    width: 90%;
   }
 `;
 
 const Img = styled.img`
   width: 25vw; /* Adjust width to account for padding */
   height: auto;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  background-color: white;
-  margin-bottom: 1rem; /* Ensure margin is only applied to the bottom */
   display: block;
   break-inside: avoid;
-  box-sizing: border-box; /* Include padding in width/height calculations */
+
   cursor: pointer; /* Change cursor to pointer to indicate clickable images */
 
-  @media (max-width: 800px) {
-    width: 20vw;
-  }
   @media (max-width: 500px) {
-    width: 70vw;
+    width: 90vw; /* Ensure images scale properly to fill carousel */
+    margin: 0 auto; /* Center images in their container */
   }
 `;
 
 const Frame = styled.div``;
 
-export { Container, ImageContainer, Img, MainContainer, Frame };
+export {
+  Container,
+  ImageContainer,
+  Img,
+  MainContainer,
+  Frame,
+  CarouselWrapper,
+};

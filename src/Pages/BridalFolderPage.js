@@ -7,12 +7,13 @@ import {
   ImgSmall,
   Location,
 } from "../Styles/BridalFolderStyles";
-import { Title, Container, Paragraph } from "../Styles/PagesStyle";
+import { Title, Paragraph } from "../Styles/PagesStyle";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Papa from "papaparse";
 import { FormButton } from "../Styles/FormStyles";
-import Error from "../Pages/Error"; // Import your ErrorPage component
+import Error from "../Pages/Error";
+import styled from "@emotion/styled"; // Import your ErrorPage component
 
 const BridalFolderPage = () => {
   const { foldername } = useParams();
@@ -23,6 +24,7 @@ const BridalFolderPage = () => {
   const [csv, setCsv] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [description2, setDescription2] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -69,6 +71,7 @@ const BridalFolderPage = () => {
         if (result.data && result.data.length > 0) {
           setTitle(result.data[0]["Title"]);
           setDescription(result.data[0]["Description"]);
+          setDescription2(result.data[0]["Description2"]);
         }
       } catch (error) {
         console.error("Error fetching or parsing CSV:", error);
@@ -94,16 +97,9 @@ const BridalFolderPage = () => {
   };
 
   const handleThumbnailClick = (index) => {
-    if (index !== activeIndex) {
-      if (carouselRef.current) {
-        carouselRef.current.goToSlide(index, { silent: true });
-      }
-      setActiveIndex(index);
+    if (carouselRef.current) {
+      carouselRef.current.goToSlide(index); // Navigate to the specific slide
     }
-  };
-
-  const handleCarouselChange = (currentSlide) => {
-    setActiveIndex(currentSlide);
   };
 
   // Handle loading and error states before returning JSX
@@ -120,13 +116,46 @@ const BridalFolderPage = () => {
     return <Error />;
   }
 
+  const Container = styled.div`
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100vh;
+    height: auto;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 8rem;
+    background: #222121ff;
+    position: relative;
+
+    @media (max-width: 600px) {
+      align-items: center;
+      justify-content: center;
+      padding: 10rem 2rem 2rem 2rem;
+      height: 100%;
+    }
+  `;
+
+  const PrimaryDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center; /* Center content for mobile */
+      gap: 1rem; /* Add spacing between sections */
+    }
+  `;
+
   // Otherwise, render the main content
   return (
-    <Container style={{ flexDirection: "column" }}>
+    <Container>
       <Location>
-        <a href={"/"}>Home </a> ><a href={"/bridal"}> bridal</a> > {title}
+        <a href={"/"}>Home </a> ><a href={"/bridal"}> Bridal</a> > {title}
       </Location>
-      <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
+      <PrimaryDiv>
         <Div>
           <Carousel
             responsive={responsive}
@@ -136,9 +165,6 @@ const BridalFolderPage = () => {
             itemClass="bridal-folder-carousel-item"
             customTransition="transform 500ms ease-in-out"
             transitionDuration={500}
-            afterChange={(previousSlide, currentSlide) =>
-              handleCarouselChange(currentSlide)
-            }
           >
             {images.map((image, index) => (
               <ImgLarge key={index} src={image.url} alt={image.alt} />
@@ -161,7 +187,6 @@ const BridalFolderPage = () => {
                 onClick={() => handleThumbnailClick(index)}
                 style={{
                   cursor: "pointer",
-                  border: activeIndex === index ? "2px solid #ad9e75" : "none",
                 }}
               />
             ))}
@@ -169,8 +194,11 @@ const BridalFolderPage = () => {
         </Div>
         <Div>
           <Title>{title}</Title>
-          <Paragraph style={{ paddingTop: "70px", width: "60%" }}>
+          <Paragraph style={{ paddingTop: "70px", fontWeight: "lighter" }}>
             {description}
+          </Paragraph>
+          <Paragraph style={{ paddingTop: "30px", fontWeight: "lighter" }}>
+            {description2}
           </Paragraph>
           <FormButton
             style={{ marginTop: "6rem", fontSize: "0.9rem", padding: "1rem" }}
@@ -181,7 +209,7 @@ const BridalFolderPage = () => {
             BOOK AN APPOINTMENT
           </FormButton>
         </Div>
-      </div>
+      </PrimaryDiv>
     </Container>
   );
 };

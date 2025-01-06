@@ -62,6 +62,9 @@ a {
     position: relative; /* Make the container relative for dot positioning */
     max-width: 25vw; /* Matches the Img styling width */
     margin: 0 auto;
+    @media (max-width: 500px) {
+        max-width: 80vw;
+    }
 }
 
 .carousel-item {
@@ -70,13 +73,17 @@ a {
     align-items: center;
     max-width: 25vw; /* Matches Img width */
     position: relative; /* Ensure dot alignment inside each item */
+
+    @media (max-width: 500px) {
+        max-width: 80vw;
+    }
 }
 
 .react-multi-carousel-dot-list {
     position: absolute;
     /*bottom: -40%; !* Position dots consistently 10px from the bottom of the carousel *!*/
     left: 50%;
-    transform: translateY(-94%);
+    transform: translateY(-20%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +105,7 @@ a {
 }
 
 
-/*Folder Page Carousel Styles*/
+/* Inside Folder Page Carousel Styles*/
 .bridal-folder-carousel {
     max-width: 40vw; /* Expands the carousel container */
     margin: 0 auto; /* Centers the carousel */
@@ -106,6 +113,10 @@ a {
     flex: 1; /* Allow the carousel to expand within the flex container */
     width: 100%;
     display: block; /* Override potential flexbox conflicts in carousel styles */
+
+    @media (max-width: 600px) {
+        max-width: 80vw;
+    }
 }
 
 .bridal-folder-carousel-item {
@@ -114,6 +125,10 @@ a {
     max-width: 40vw; /* Matches the carousel width */
     display: block; /* Ensure items stack properly */
     width: 100%;
+
+    @media (max-width: 500px) {
+        max-width: 80vw;
+    }
 }
 
 
