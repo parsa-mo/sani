@@ -6,26 +6,31 @@ const NavLinks = [
   },
   {
     id: 2,
+    name: "SHAPEWEAR",
+    href: "/shapewear",
+  },
+  {
+    id: 3,
     name: "ACCESSORIES",
     href: "/accessories",
   },
   {
-    id: 3,
+    id: 4,
     name: "BRIDAL",
     href: "/bridal",
   },
   {
-    id: 4,
+    id: 5,
     name: "GALLERY",
     href: "/gallery",
   },
   {
-    id: 5,
+    id: 6,
     name: "ABOUT US",
     href: "/about-us",
   },
   {
-    id: 6,
+    id: 7,
     name: "CONTACT US",
     href: "/contact-us",
   },

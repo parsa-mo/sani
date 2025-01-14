@@ -19,7 +19,6 @@ const BridalFolderPage = () => {
   const { foldername } = useParams();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
   const [csv, setCsv] = useState(null);
   const [title, setTitle] = useState("");
@@ -141,6 +140,10 @@ const BridalFolderPage = () => {
     display: flex;
     flex-direction: row;
     width: 100%;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
 
     @media (max-width: 600px) {
       flex-direction: column;

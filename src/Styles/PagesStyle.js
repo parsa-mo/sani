@@ -27,7 +27,7 @@ const Container = styled.div`
 const Div = styled.div`
   box-sizing: border-box;
   display: block;
-  padding: 6rem 6rem 3rem 6rem;
+  padding: 6rem 6rem 2rem 6rem;
   @media (max-width: 1100px) {
     padding: 6rem 3rem 3rem 3rem;
   }

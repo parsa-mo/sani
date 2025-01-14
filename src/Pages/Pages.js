@@ -6,6 +6,8 @@ import Gallery from "./Gallery";
 import Bridal from "./Bridal";
 import Accessories from "./Accessories";
 import BridalFolderPage from "./BridalFolderPage";
+import Shapewear from "./Shapewear";
+import ShapewearProductPage from "./ShapewearProductPage";
 
 export {
   Home,
@@ -16,4 +18,6 @@ export {
   Gallery,
   Accessories,
   BridalFolderPage,
+  Shapewear,
+  ShapewearProductPage,
 };

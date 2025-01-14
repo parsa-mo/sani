@@ -90,18 +90,16 @@ a {
     padding: 0;
     margin: 0;
     z-index: 5; /* Ensure dots appear above other content */
+
 }
 
 .react-multi-carousel-dot button {
     background: rgb(69, 69, 69); /* Dot color */
     border-radius: 50%;
-    width: 5px; /* Larger for better visibility */
-    height: 5px;
     border: none;
     margin: 0 5px;
-}
-
-.react-multi-carousel-dot--active button {
+    width: 10px !important;
+    height: 10px !important;
 }
 
 
@@ -114,6 +112,9 @@ a {
     width: 100%;
     display: block; /* Override potential flexbox conflicts in carousel styles */
 
+    @media (max-width: 1200px) {
+        max-width: 80vw;
+    }
     @media (max-width: 600px) {
         max-width: 80vw;
     }
@@ -126,6 +127,9 @@ a {
     display: block; /* Ensure items stack properly */
     width: 100%;
 
+    @media (max-width: 1200px) {
+        max-width: 80vw;
+    }
     @media (max-width: 500px) {
         max-width: 80vw;
     }

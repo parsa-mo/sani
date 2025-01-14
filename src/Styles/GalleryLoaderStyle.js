@@ -54,7 +54,7 @@ const ImageContainer = styled.div`
 
   @media (max-width: 500px) {
     column-count: 1; /* Single column layout on small screens */
-    width: 90%;
+    width: 80vw;
   }
 `;
 
@@ -67,7 +67,7 @@ const Img = styled.img`
   cursor: pointer; /* Change cursor to pointer to indicate clickable images */
 
   @media (max-width: 500px) {
-    width: 90vw; /* Ensure images scale properly to fill carousel */
+    width: 80vw; /* Ensure images scale properly to fill carousel */
     margin: 0 auto; /* Center images in their container */
   }
 `;

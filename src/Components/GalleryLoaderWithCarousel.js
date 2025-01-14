@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { FetchImageFolders } from "./FetchImageFolders";
 import {
   Container,
-  Frame,
   ImageContainer,
   Img,
   CarouselWrapper,
@@ -53,12 +52,14 @@ const GalleryLoaderWithCarousel = ({ FolderName }) => {
                     key={index}
                     src={image.url}
                     alt={image.alt}
-                    onClick={() => navigate(`/bridal/${folder.folderName}`)}
+                    onClick={() =>
+                      navigate(`/${FolderName}/${folder.folderName}`)
+                    }
                   />
                 ))}
             </Carousel>
             <Link
-              to={`/bridal/${folder.folderName}`}
+              to={`/${FolderName}/${folder.folderName}`}
               style={{
                 color: "#000",
                 textDecoration: "none",
@@ -69,9 +70,7 @@ const GalleryLoaderWithCarousel = ({ FolderName }) => {
                 padding: "0.5rem",
               }}
             >
-              {folder.folderName
-                .split("_")[1]
-                ?.replace(/^\w/, (c) => c.toUpperCase()) || "Unknown"}
+              {folder.folderName.split("_")[1]?.toUpperCase() || "UNKNOWN"}
             </Link>
           </CarouselWrapper>
         ))}

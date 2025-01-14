@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderOnlineStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Shapewear.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStoreStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/ShapewearProductPageStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styles/PagesStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
@@ -218,7 +225,15 @@
       <workItem from="1735634111899" duration="805000" />
       <workItem from="1735990259068" duration="2858000" />
       <workItem from="1736084592937" duration="3000" />
-      <workItem from="1736152911676" duration="5598000" />
+      <workItem from="1736152911676" duration="5658000" />
+      <workItem from="1736212231562" duration="3263000" />
+      <workItem from="1736218951504" duration="14000" />
+      <workItem from="1736239434990" duration="3315000" />
+      <workItem from="1736304138242" duration="5315000" />
+      <workItem from="1736422847121" duration="4339000" />
+      <workItem from="1736506062376" duration="6875000" />
+      <workItem from="1736769255897" duration="4491000" />
+      <workItem from="1736816681208" duration="1840000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -412,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733926125689</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Finish Bridal Section">
+      <option name="closed" value="true" />
+      <created>1736169583149</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1736169583149</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +478,8 @@
     <MESSAGE value="Finish" />
     <MESSAGE value="update GalleryLoader.js" />
     <MESSAGE value="finish bridal plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish bridal plugin" />
+    <MESSAGE value="Finish Bridal Section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Bridal Section" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
