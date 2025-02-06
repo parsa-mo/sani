@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import sanilogo from "../Images/sanilogo.png";
 import SidebarLogo from "../Images/SidebarLogo.png";
 import { NavLinks } from "../Links/Data";
+import CartTab from "./CartTab";
 
 const Sidebar = () => {
   const [rotate, setRotate] = useState(false);
@@ -27,11 +28,31 @@ const Sidebar = () => {
         <NavLink to="/">
           <SidebarLogos key={1} src={sanilogo} alt="logo" t />
         </NavLink>
+        <div
+          style={{
+            color: "#ad9e75",
+            fontSize: "1.5rem",
+            textAlign: "center",
+            display: "flex",
+            fontWeight: 700,
+            textDecoration: "none",
+            padding: "10px 10px 10px 10px",
+            borderRadius: "5px",
+            cursor: "pointer",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: "auto",
+            marginRight: "10px",
+          }}
+        >
+          <CartTab></CartTab>
+        </div>
+
         <SidebarLogos
           key={2}
           src={SidebarLogo}
           alt="logo"
-          style={{ width: "50px", cursor: "pointer" }}
+          style={{ width: "30px", cursor: "pointer" }}
           rotate={rotate}
           onClick={handleClick}
         />

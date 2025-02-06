@@ -15,6 +15,7 @@ import { MyNavbar, Footer } from "./Components/components";
 import React, { createContext, useState, useEffect, useContext } from "react";
 import { ref, onValue } from "firebase/database";
 import { database } from "./Firebase";
+import { CartProvider } from "./Components/CartContext";
 
 const FirebaseDataContext = createContext();
 
@@ -55,27 +56,29 @@ export const useFirebaseData = () => {
 
 function App() {
   return (
-    <FirebaseDataProvider>
-      <BrowserRouter>
-        <MyNavbar />
-        <Routes>
-          <Route path={"/"} element={<Home />}></Route>
-          <Route path={"/about-us"} element={<AboutUs />}></Route>
-          <Route path={"/shapewear"} element={<Shapewear />}></Route>
-          <Route
-            path={"/shapewear/:foldername"}
-            element={<ShapewearProductPage />}
-          ></Route>
-          <Route path={"/contact-us"} element={<ContactUs />}></Route>
-          <Route path={"/bridal"} element={<Bridal />}></Route>
-          <Route path="/bridal/:foldername" element={<BridalFolderPage />} />
-          <Route path={"/accessories"} element={<Accessories />}></Route>
-          <Route path={"/Gallery"} element={<Gallery />}></Route>
-          <Route path="*" element={<Error />}></Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </FirebaseDataProvider>
+    <CartProvider>
+      <FirebaseDataProvider>
+        <BrowserRouter>
+          <MyNavbar />
+          <Routes>
+            <Route path={"/"} element={<Home />}></Route>
+            <Route path={"/about-us"} element={<AboutUs />}></Route>
+            <Route path={"/shapewear"} element={<Shapewear />}></Route>
+            <Route
+              path={"/shapewear/:foldername"}
+              element={<ShapewearProductPage />}
+            ></Route>
+            <Route path={"/contact-us"} element={<ContactUs />}></Route>
+            <Route path={"/bridal"} element={<Bridal />}></Route>
+            <Route path="/bridal/:foldername" element={<BridalFolderPage />} />
+            <Route path={"/accessories"} element={<Accessories />}></Route>
+            <Route path={"/Gallery"} element={<Gallery />}></Route>
+            <Route path="*" element={<Error />}></Route>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </FirebaseDataProvider>
+    </CartProvider>
   );
 }
 

@@ -31,6 +31,7 @@ const NavLinksContainer = styled.ul`
   display: flex;
   margin-left: auto; /* Pushes the navigation links to the right */
   padding: 0; /* Removes default padding */
+  align-items: center;
 `;
 
 const NavList = styled.li`

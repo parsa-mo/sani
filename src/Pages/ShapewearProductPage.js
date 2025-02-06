@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   Container,
   Div,
@@ -22,10 +22,11 @@ import {
   ModalContent,
   A,
 } from "../Styles/ShapewearProductPageStyle";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { FetchImageFolders } from "../Components/FetchImageFolders";
 import { useFirebaseData } from "../App";
 import Carousel from "react-multi-carousel";
+import { CartContext } from "../Components/CartContext";
 
 const ShapewearProductPage = () => {
   const { foldername } = useParams();
@@ -44,6 +45,9 @@ const ShapewearProductPage = () => {
   const [outOfStock, setOutOfStock] = useState(false);
   const [sizeChart, setSizeChart] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { addToCart } = useContext(CartContext);
+  const [thumbnail, setThumbnail] = useState();
+  const location = useLocation().pathname;
 
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
@@ -86,6 +90,14 @@ const ShapewearProductPage = () => {
           typeof img.url === "string" &&
           img.url.toLowerCase().includes(activeColor.toLowerCase()),
       );
+
+      const thum = folder.images.filter(
+        (img) =>
+          typeof img.url === "string" &&
+          img.url.toLowerCase().includes("thumbnail".toLowerCase()),
+      );
+
+      setThumbnail(thum[0].url);
       setFilteredImages(matchingImages);
     } else {
       setFilteredImages([]);
@@ -156,6 +168,19 @@ const ShapewearProductPage = () => {
     setIsModalOpen(false);
   };
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: foldername + activeColor + activeSize,
+      name: firebaseFolderData?.Name,
+      price: firebaseFolderData?.Price,
+      quantity: quantity,
+      color: activeColor,
+      size: activeSize,
+      image: thumbnail,
+      href: location,
+    });
+  };
+
   return (
     <Container>
       <Location>
@@ -186,8 +211,23 @@ const ShapewearProductPage = () => {
             <Paragraph>No images available for {activeColor}</Paragraph>
           )}
 
-          <Paragraph>
-            Color <span style={{ marginLeft: "3px" }}>{activeColor}</span>{" "}
+          <Paragraph
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              Color{" "}
+              <span style={{ marginLeft: "3px", marginRight: "auto" }}>
+                {activeColor}
+              </span>{" "}
+            </div>
+            <div>
+              {" "}
+              {sizeChart && <A onClick={handleSizeChartOpen}>Size Chart</A>}
+            </div>
           </Paragraph>
           <ColorButtonWrapper>
             {colors.map((color, index) => (
@@ -204,14 +244,7 @@ const ShapewearProductPage = () => {
             ))}
           </ColorButtonWrapper>
 
-          <Paragraph
-            style={{
-              width: "100%",
-              borderBottom: "1.5px #ad9e75 solid",
-              paddingBottom: "0.5rem",
-              marginBottom: ".8rem",
-            }}
-          >
+          <Paragraph>
             <div
               style={{
                 display: "flex",
@@ -219,11 +252,6 @@ const ShapewearProductPage = () => {
               }}
             >
               Size <span style={{ paddingLeft: "10px" }}>{activeSize}</span>
-              {sizeChart && (
-                <A href="#" onClick={handleSizeChartOpen}>
-                  Size Chart
-                </A>
-              )}
             </div>
           </Paragraph>
 
@@ -312,7 +340,10 @@ const ShapewearProductPage = () => {
                 +
               </QuantityButton>
             </QuantityWrapper>
-            <BuyButton disabled={!activeSize || quantity === 0}>
+            <BuyButton
+              disabled={!activeSize || quantity === 0}
+              onClick={handleAddToCart}
+            >
               {!activeSize ? "SELECT SIZE" : "ADD TO CART"}
             </BuyButton>
           </Div>

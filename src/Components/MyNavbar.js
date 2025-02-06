@@ -7,6 +7,7 @@ import {
   NavLinksContainer,
   NavButton,
 } from "../Styles/NavbarStyle";
+import CartTab from "./CartTab";
 import { NavLinks } from "../Links/Data";
 import { NavLink, useLocation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
@@ -88,6 +89,24 @@ const MyNavbar = () => {
               </NavLink>
             </NavList>
           ))}
+          <div
+            style={{
+              ...navLinkStyle,
+              fontSize: "1.8rem",
+              textAlign: "center",
+              display: "flex",
+              fontWeight: 700,
+              textDecoration: "none",
+              padding: "10px 10px 10px 10px",
+              borderRadius: "5px",
+              cursor: "pointer",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            className={({ isActive }) => (isActive ? "ActiveNavButton" : "")}
+          >
+            <CartTab />
+          </div>
         </NavLinksContainer>
       </NavContainer>
     );

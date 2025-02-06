@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderOnlineStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Shapewear.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStoreStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/ShapewearProductPageStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CartContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/CartTab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/CartItemStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/CartStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderWithCarousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Links/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Links/Data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/PagesStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/PagesStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/NavbarStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
@@ -233,7 +232,16 @@
       <workItem from="1736422847121" duration="4339000" />
       <workItem from="1736506062376" duration="6875000" />
       <workItem from="1736769255897" duration="4491000" />
-      <workItem from="1736816681208" duration="1840000" />
+      <workItem from="1736816681208" duration="8878000" />
+      <workItem from="1736907546066" duration="3789000" />
+      <workItem from="1737087482766" duration="6776000" />
+      <workItem from="1737163734723" duration="4383000" />
+      <workItem from="1737186047214" duration="5972000" />
+      <workItem from="1737284389150" duration="4947000" />
+      <workItem from="1738239878781" duration="1838000" />
+      <workItem from="1738636314217" duration="9287000" />
+      <workItem from="1738753735019" duration="5516000" />
+      <workItem from="1738820834505" duration="1766000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -435,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736169583149</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Finish Shapewear Frontend">
+      <option name="closed" value="true" />
+      <created>1736827936142</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1736827936142</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +495,8 @@
     <MESSAGE value="update GalleryLoader.js" />
     <MESSAGE value="finish bridal plugin" />
     <MESSAGE value="Finish Bridal Section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish Bridal Section" />
+    <MESSAGE value="Finish Shapewear Frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Shapewear Frontend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
