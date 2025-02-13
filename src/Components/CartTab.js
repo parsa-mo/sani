@@ -48,6 +48,12 @@ const CartTab = () => {
     // You can redirect to a checkout page or Stripe here
   };
 
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      setIsOpen(true);
+    }
+  }, [cartItems]);
+
   const cartContent = (
     <>
       <Overlay isOpen={isOpen} onClick={toggleCart} />

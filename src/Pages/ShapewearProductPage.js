@@ -78,7 +78,7 @@ const ShapewearProductPage = () => {
   }, [firebaseFolderData]);
 
   useEffect(() => {
-    if (colors.length) {
+    if (colors) {
       setActiveColor(colors[0]);
     }
   }, [colors]);
@@ -108,7 +108,8 @@ const ShapewearProductPage = () => {
         (img) =>
           typeof img.url === "string" && img.url.toLowerCase().includes("size"),
       );
-      setSizeChart(chart[0].url);
+
+      setSizeChart(chart[0]?.url);
     }
   }, [folder, activeColor]);
 
