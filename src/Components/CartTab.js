@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { faCartShopping, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { createPortal } from "react-dom";
@@ -29,6 +29,16 @@ const CartTab = () => {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // ✅ Only open the cart when an item is ADDED (not removed)
+    if (cartItems.length > 0) {
+      setIsOpen(true);
+    }
+    if (cartItems.length === 0) {
+      setIsOpen(false);
+    }
+  }, [cartItems]);
+
   const toggleCart = () => {
     setIsOpen(!isOpen);
   };
@@ -43,16 +53,37 @@ const CartTab = () => {
     .toFixed(2);
 
   // Handle Checkout Button
-  const handleCheckout = () => {
-    alert("Proceeding to Checkout...");
-    // You can redirect to a checkout page or Stripe here
-  };
+  const handleCheckout = async () => {
+    toggleCart();
+    try {
+      const currentPage = window.location.href; // ✅ Get the last visited URL
 
-  useEffect(() => {
-    if (cartItems.length > 0) {
-      setIsOpen(true);
+      const response = await fetch(
+        "https://asia-southeast1-sani-85087.cloudfunctions.net/api/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            cartItems,
+            cancelUrl: currentPage, // ✅ Send last visited URL
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (data.url) {
+        window.location.href = data.url; // ✅ Redirect to Stripe Checkout
+      } else {
+        alert("Error creating checkout session");
+      }
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert("Something went wrong. Please try again.");
     }
-  }, [cartItems]);
+  };
 
   const cartContent = (
     <>

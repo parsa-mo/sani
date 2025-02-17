@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   Container,
-  Div,
+  LeftDiv,
+  RightDiv,
   PrimaryDiv,
   ImgLarge,
   Location,
@@ -21,6 +22,7 @@ import {
   CloseButton,
   ModalContent,
   A,
+  Paragraph2,
 } from "../Styles/ShapewearProductPageStyle";
 import { useLocation, useParams } from "react-router-dom";
 import { FetchImageFolders } from "../Components/FetchImageFolders";
@@ -48,6 +50,7 @@ const ShapewearProductPage = () => {
   const { addToCart } = useContext(CartContext);
   const [thumbnail, setThumbnail] = useState();
   const location = useLocation().pathname;
+  const [errorMessage, setErrorMessage] = useState(""); // ✅ State for error message
 
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
@@ -170,16 +173,58 @@ const ShapewearProductPage = () => {
   };
 
   const handleAddToCart = () => {
+    if (quantity < 1) return; // Prevent adding 0 quantity
+
+    // ✅ Get current quantity of this item in the cart
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cartItems.find(
+      (item) => item.id === `${foldername}-${activeColor}-${activeSize}`,
+    );
+    const existingQuantity = existingItem ? existingItem.quantity : 0;
+
+    // ✅ Calculate total if adding
+    const newTotalQuantity = existingQuantity + quantity;
+
+    // ✅ Prevent exceeding stock
+    if (newTotalQuantity > maxQuantity) {
+      setErrorMessage(
+        `Only ${maxQuantity} in stock! You already have ${existingQuantity} in your cart.`,
+      );
+      setTimeout(() => setErrorMessage(""), 10000);
+      return;
+    }
+
+    // ✅ Reset error message if successful
+    setErrorMessage("");
+
     addToCart({
-      id: foldername + activeColor + activeSize,
+      id: `${foldername}-${activeColor}-${activeSize}`,
+      folderID: foldername,
       name: firebaseFolderData?.Name,
       price: firebaseFolderData?.Price,
-      quantity: quantity,
+      quantity: quantity, // ✅ Correct quantity now
+      maxQuantity: maxQuantity,
       color: activeColor,
       size: activeSize,
       image: thumbnail,
       href: location,
     });
+  };
+
+  const colorMap = {
+    Black: "#000000",
+    White: "#FFFFFF",
+    Red: "#FF0000",
+    Blue: "#0000FF",
+    Green: "#008000",
+    Brown: "#8B4513", // Correct brown shade
+    Nude: "#F2D2BD", // Proper nude color
+    Beige: "#F5F5DC",
+    Pink: "#FFC0CB",
+    Yellow: "#FFFF00",
+    Grey: "#808080",
+    Jasper: "#6B6156",
+    Cocoa: "#35281E",
   };
 
   return (
@@ -189,7 +234,7 @@ const ShapewearProductPage = () => {
         {foldername}
       </Location>
       <PrimaryDiv>
-        <Div>
+        <LeftDiv>
           {filteredImages.length > 0 ? (
             <Carousel
               responsive={responsive}
@@ -211,32 +256,41 @@ const ShapewearProductPage = () => {
           ) : (
             <Paragraph>No images available for {activeColor}</Paragraph>
           )}
+        </LeftDiv>
 
-          <Paragraph
+        <RightDiv>
+          <Title>{firebaseFolderData?.Name || "Loading..."}</Title>
+          <Price>${firebaseFolderData?.Price || "N/A"}</Price>
+          <Paragraph>
+            {firebaseFolderData?.Description1 || "Loading..."}
+          </Paragraph>
+          <Paragraph>
+            {firebaseFolderData?.Description2 || "Loading..."}
+          </Paragraph>
+          <Paragraph>{firebaseFolderData?.Features || "Loading..."}</Paragraph>
+
+          <Paragraph2
             style={{
               width: "100%",
               display: "flex",
-              justifyContent: "space-between",
+              paddingTop: "3rem",
             }}
           >
             <div>
-              Color{" "}
-              <span style={{ marginLeft: "3px", marginRight: "auto" }}>
+              <span style={{ fontWeight: "lighter" }}>Color </span>
+              <span style={{ marginLeft: "3px", marginRight: 0 }}>
                 {activeColor}
               </span>{" "}
             </div>
-            <div>
-              {" "}
-              {sizeChart && <A onClick={handleSizeChartOpen}>Size Chart</A>}
-            </div>
-          </Paragraph>
+          </Paragraph2>
+
           <ColorButtonWrapper>
             {colors.map((color, index) => (
               <ColorButton
                 key={index}
                 onClick={() => handleColorClick(color)}
                 style={{
-                  backgroundColor: color.toLowerCase(),
+                  backgroundColor: colorMap[color] || color.toLowerCase(), // ✅ Use mapped color or fallback
                   border:
                     activeColor === color ? "2px solid #000" : "1px solid #ccc",
                 }}
@@ -245,16 +299,17 @@ const ShapewearProductPage = () => {
             ))}
           </ColorButtonWrapper>
 
-          <Paragraph>
+          <Paragraph2>
             <div
               style={{
                 display: "flex",
                 fontWeight: "lighter",
+                paddingTop: "1rem",
               }}
             >
               Size <span style={{ paddingLeft: "10px" }}>{activeSize}</span>
             </div>
-          </Paragraph>
+          </Paragraph2>
 
           {isModalOpen && (
             <ModalOverlay onClick={handleSizeChartClose}>
@@ -310,22 +365,12 @@ const ShapewearProductPage = () => {
 
           {outOfStock && <OutOfStockMessage>Out of Stock</OutOfStockMessage>}
 
-          <div style={{ paddingTop: "1rem", color: "#ad9e75" }}>
-            Product No. {foldername}
+          <div style={{ paddingTop: "1rem" }}>
+            {" "}
+            {sizeChart && <A onClick={handleSizeChartOpen}>Size Chart</A>}
           </div>
-        </Div>
 
-        <Div>
-          <Title>{firebaseFolderData?.Name || "Loading..."}</Title>
-          <Price>${firebaseFolderData?.Price || "N/A"}</Price>
-          <Paragraph>
-            {firebaseFolderData?.Description1 || "Loading..."}
-          </Paragraph>
-          <Paragraph>
-            {firebaseFolderData?.Description2 || "Loading..."}
-          </Paragraph>
-          <Paragraph>{firebaseFolderData?.Features || "Loading..."}</Paragraph>
-          <Div style={{ flexDirection: "row" }}>
+          <RightDiv style={{ paddingTop: "2rem", flexDirection: "row" }}>
             <QuantityWrapper>
               <QuantityButton
                 onClick={decreaseQuantity}
@@ -347,8 +392,14 @@ const ShapewearProductPage = () => {
             >
               {!activeSize ? "SELECT SIZE" : "ADD TO CART"}
             </BuyButton>
-          </Div>
-        </Div>
+          </RightDiv>
+          {errorMessage && (
+            <p style={{ color: "red", paddingBottom: "1rem" }}>
+              {errorMessage}
+            </p>
+          )}
+          <div style={{ color: "#ad9e75" }}>Product No. {foldername}</div>
+        </RightDiv>
       </PrimaryDiv>
     </Container>
   );

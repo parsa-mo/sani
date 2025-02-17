@@ -3,9 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { FetchImageFolders } from "../Components/FetchImageFolders";
 import {
   ImgLarge,
-  Div,
+  DivLeft,
+  DivRight,
   ImgSmall,
   Location,
+  Container,
+  PrimaryDiv,
 } from "../Styles/BridalFolderStyles";
 import { Title, Paragraph } from "../Styles/PagesStyle";
 import Carousel from "react-multi-carousel";
@@ -13,7 +16,6 @@ import "react-multi-carousel/lib/styles.css";
 import Papa from "papaparse";
 import { FormButton } from "../Styles/FormStyles";
 import Error from "../Pages/Error";
-import styled from "@emotion/styled"; // Import your ErrorPage component
 
 const BridalFolderPage = () => {
   const { foldername } = useParams();
@@ -115,43 +117,6 @@ const BridalFolderPage = () => {
     return <Error />;
   }
 
-  const Container = styled.div`
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    box-sizing: border-box;
-    min-height: 100vh;
-    height: auto;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding: 8rem;
-    background: #222121ff;
-    position: relative;
-
-    @media (max-width: 600px) {
-      align-items: center;
-      justify-content: center;
-      padding: 10rem 2rem 2rem 2rem;
-      height: 100%;
-    }
-  `;
-
-  const PrimaryDiv = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    @media (max-width: 1200px) {
-      flex-direction: column;
-    }
-
-    @media (max-width: 600px) {
-      flex-direction: column;
-      align-items: center; /* Center content for mobile */
-      gap: 1rem; /* Add spacing between sections */
-    }
-  `;
-
   // Otherwise, render the main content
   return (
     <Container>
@@ -159,7 +124,7 @@ const BridalFolderPage = () => {
         <a href={"/"}>Home </a> ><a href={"/bridal"}> Bridal</a> > {title}
       </Location>
       <PrimaryDiv>
-        <Div>
+        <DivLeft>
           <Carousel
             responsive={responsive}
             arrows={true}
@@ -194,8 +159,8 @@ const BridalFolderPage = () => {
               />
             ))}
           </div>
-        </Div>
-        <Div>
+        </DivLeft>
+        <DivRight>
           <Title>{title}</Title>
           <Paragraph style={{ paddingTop: "70px", fontWeight: "lighter" }}>
             {description}
@@ -211,7 +176,7 @@ const BridalFolderPage = () => {
           >
             BOOK AN APPOINTMENT
           </FormButton>
-        </Div>
+        </DivRight>
       </PrimaryDiv>
     </Container>
   );

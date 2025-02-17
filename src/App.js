@@ -10,6 +10,7 @@ import {
   BridalFolderPage,
   Shapewear,
   ShapewearProductPage,
+  Success,
 } from "./Pages/Pages.js";
 import { MyNavbar, Footer } from "./Components/components";
 import React, { createContext, useState, useEffect, useContext } from "react";
@@ -73,6 +74,7 @@ function App() {
             <Route path="/bridal/:foldername" element={<BridalFolderPage />} />
             <Route path={"/accessories"} element={<Accessories />}></Route>
             <Route path={"/Gallery"} element={<Gallery />}></Route>
+            <Route path={"/success"} element={<Success />}></Route>
             <Route path="*" element={<Error />}></Route>
           </Routes>
           <Footer />

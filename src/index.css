@@ -105,8 +105,8 @@ a {
 
 /* Inside Folder Page Carousel Styles*/
 .bridal-folder-carousel {
-    max-width: 40vw; /* Expands the carousel container */
-    margin: 0 auto; /* Centers the carousel */
+    max-width: 30vw; /* Expands the carousel container */
+    margin: 0; /* Centers the carousel */
     position: relative; /* Keeps dots and arrows properly aligned */
     flex: 1; /* Allow the carousel to expand within the flex container */
     width: 100%;
@@ -123,7 +123,7 @@ a {
 .bridal-folder-carousel-item {
     justify-content: center;
     align-items: center;
-    max-width: 40vw; /* Matches the carousel width */
+    max-width: 30vw; /* Matches the carousel width */
     display: block; /* Ensure items stack properly */
     width: 100%;
 

@@ -22,17 +22,29 @@ export const CartProvider = ({ children }) => {
   // Add item to cart
   const addToCart = (product) => {
     setCartItems((prevItems) => {
-      const existingItem = prevItems.find(
-        (item) => item.id === product.id && item.color === product.color,
-      );
+      const existingItem = prevItems.find((item) => item.id === product.id);
+
       if (existingItem) {
+        // ✅ Calculate new total quantity
+        const newQuantity = existingItem.quantity + product.quantity;
+
+        // ✅ Prevent exceeding max stock
+        if (newQuantity > product.maxQuantity) {
+          // alert(`Only ${product.maxQuantity} in stock!`);
+          return prevItems; // ❌ Do not add more if stock limit is exceeded
+        }
+
         return prevItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item,
+          item.id === product.id ? { ...item, quantity: newQuantity } : item,
         );
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        // ✅ Ensure new items follow stock limit
+        if (product.quantity > product.maxQuantity) {
+          alert(`Only ${product.maxQuantity} in stock!`);
+          return prevItems;
+        }
+
+        return [...prevItems, product];
       }
     });
   };
@@ -42,7 +54,10 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  const clearCart = () => setCartItems([]);
+  const clearCart = () => {
+    setCartItems([]); // ✅ Clear cart state
+    localStorage.removeItem("cart"); // ✅ Clear localStorage
+  };
 
   return (
     <CartContext.Provider

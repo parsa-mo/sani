@@ -8,6 +8,7 @@ import Accessories from "./Accessories";
 import BridalFolderPage from "./BridalFolderPage";
 import Shapewear from "./Shapewear";
 import ShapewearProductPage from "./ShapewearProductPage";
+import Success from "./Success";
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   BridalFolderPage,
   Shapewear,
   ShapewearProductPage,
+  Success,
 };

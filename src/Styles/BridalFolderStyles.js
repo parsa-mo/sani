@@ -1,6 +1,60 @@
 import styled from "@emotion/styled";
 
-const Div = styled.div`
+const Container = styled.div`
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: auto;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 8rem;
+  background: #222121ff;
+  position: relative;
+
+  @media (max-width: 600px) {
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 2rem 2rem 2rem;
+    height: 100%;
+  }
+`;
+
+const PrimaryDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center; /* Center content for mobile */
+    gap: 1rem; /* Add spacing between sections */
+  }
+`;
+
+const DivLeft = styled.div`
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  width: 60%;
+  padding: 6rem 3rem 3rem 1rem;
+  @media (max-width: 1100px) {
+    padding: 6rem 3rem 3rem 3rem;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem; /* Reduce padding for smaller screens */
+    align-items: center; /* Center align content on mobile */
+    width: 100%;
+  }
+`;
+const DivRight = styled.div`
   box-sizing: border-box;
   align-items: flex-start;
   flex-direction: column;
@@ -17,7 +71,7 @@ const Div = styled.div`
 `;
 
 const ImgLarge = styled.img`
-  width: 40vw;
+  width: 30vw;
   height: auto;
   object-fit: cover;
   margin: 0;
@@ -62,4 +116,12 @@ const Location = styled.div`
   }
 `;
 
-export { Div, ImgLarge, ImgSmall, Location };
+export {
+  DivLeft,
+  DivRight,
+  ImgLarge,
+  ImgSmall,
+  Location,
+  Container,
+  PrimaryDiv,
+};

@@ -56,7 +56,25 @@ const Location = styled.div`
   }
 `;
 
-const Div = styled.div`
+const LeftDiv = styled.div`
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  width: 60%;
+  padding: 6rem 3rem 3rem 1rem;
+  @media (max-width: 1100px) {
+    padding: 6rem 3rem 3rem 3rem;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem; /* Reduce padding for smaller screens */
+    align-items: center; /* Center align content on mobile */
+    width: 100%;
+  }
+`;
+
+const RightDiv = styled.div`
   box-sizing: border-box;
   align-items: flex-start;
   flex-direction: column;
@@ -65,10 +83,12 @@ const Div = styled.div`
   padding: 6rem 3rem 3rem 1rem;
   @media (max-width: 1100px) {
     padding: 6rem 3rem 3rem 3rem;
+    width: 100%;
   }
   @media (max-width: 600px) {
     padding: 2rem; /* Reduce padding for smaller screens */
-    align-items: center; /* Center align content on mobile */
+    align-items: flex-start; /* Center align content on mobile */
+    width: 100%;
   }
 `;
 
@@ -87,7 +107,7 @@ const ImgSmall = styled.img`
 `;
 
 const ImgLarge = styled.img`
-  width: 40vw;
+  width: 30vw;
   height: auto;
   object-fit: cover;
   margin: 0;
@@ -112,7 +132,21 @@ const Paragraph = styled.p`
   font-weight: lighter;
 
   @media (max-width: 600px) {
-    text-align: center; /* Center paragraphs for mobile */
+    text-align: left; /* Center paragraphs for mobile */
+    font-size: 1rem; /* Adjust font size for better readability */
+  }
+`;
+
+const Paragraph2 = styled.p`
+  padding-bottom: 1rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: lighter;
+
+  @media (max-width: 600px) {
+    text-align: left; /* Center paragraphs for mobile */
     font-size: 1rem; /* Adjust font size for better readability */
   }
 `;
@@ -124,7 +158,7 @@ const Title = styled.h1`
   color: #ad9e75;
 
   @media (max-width: 600px) {
-    text-align: center; /* Center title for mobile */
+    text-align: left; /* Center title for mobile */
     font-size: 1.8rem; /* Reduce font size */
   }
 `;
@@ -198,10 +232,6 @@ const BuyButton = styled.button`
   }
   &:active {
     color: azure;
-  }
-
-  @media (max-width: 1000px) {
-    padding: 0.5rem;
   }
 `;
 // Quantity increment/decrement button
@@ -295,7 +325,6 @@ const CloseButton = styled.button`
 `;
 
 const A = styled.a`
-  margin-left: auto;
   color: #ad9e75;
   text-decoration: underline;
 
@@ -306,7 +335,8 @@ const A = styled.a`
 
 export {
   ImgLarge,
-  Div,
+  LeftDiv,
+  RightDiv,
   Location,
   ImgSmall,
   PrimaryDiv,
@@ -327,4 +357,5 @@ export {
   ModalContent,
   CloseButton,
   A,
+  Paragraph2,
 };
