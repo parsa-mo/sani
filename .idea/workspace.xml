@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1c0e647-ed47-4e54-baba-234512014329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/SuccessStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CartContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CartTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CartTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/BridalFolderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ShapewearProductPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/BridalFolderStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/ShapewearProductPageStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/ShapewearProductPageStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GalleryLoaderOnlineStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GalleryLoaderOnlineStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/GalleryLoaderStoreStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/GalleryLoaderStoreStyle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +240,8 @@
       <workItem from="1739693838855" duration="10934000" />
       <workItem from="1739793687061" duration="9000" />
       <workItem from="1739793701168" duration="7078000" />
-      <workItem from="1739807080672" duration="388000" />
+      <workItem from="1739807080672" duration="911000" />
+      <workItem from="1739962302135" duration="6941000" />
     </task>
     <task id="LOCAL-00001" summary="React-Router">
       <option name="closed" value="true" />
@@ -474,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739425444218</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="backend checkpoint">
+      <option name="closed" value="true" />
+      <created>1739807622006</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1739807622007</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Navbar" />
     <MESSAGE value="Navbar(update)" />
     <MESSAGE value="Sidebar" />
     <MESSAGE value="Sidebar Complete" />
@@ -520,7 +520,8 @@
     <MESSAGE value="Finish Shapewear Frontend" />
     <MESSAGE value="Finish stripe basic setup" />
     <MESSAGE value="Fixed some bugs with shapewearpr" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs with shapewearpr" />
+    <MESSAGE value="backend checkpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend checkpoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

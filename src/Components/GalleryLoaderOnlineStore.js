@@ -43,7 +43,7 @@ const GalleryLoaderOnlineStore = ({ FolderName }) => {
           const folderData = firebaseData[foldername];
 
           return (
-            <div key={folderIndex}>
+            <div key={folderIndex} style={{ textAlign: "center" }}>
               {thumbnails[0] && (
                 <Img
                   src={thumbnails[0].url}
@@ -64,10 +64,19 @@ const GalleryLoaderOnlineStore = ({ FolderName }) => {
                 />
               )}
 
-              <Link to={`/${FolderName}/${folder.folderName}`}>
-                <Title>{folderData?.Name || "No Name Available"}</Title>
-                <Price>${folderData?.Price || "N/A"}</Price>
-              </Link>
+              <div
+                style={{
+                  minHeight: "60px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <Link to={`/${FolderName}/${folder.folderName}`}>
+                  <Title>{folderData?.Name || "No Name Available"}</Title>
+                  <Price>${folderData?.Price || "N/A"}</Price>
+                </Link>
+              </div>
             </div>
           );
         })}

@@ -1,32 +1,39 @@
 import styled from "@emotion/styled";
 
 const ImageContainer = styled.div`
-  column-count: 4; /* Create 3 masonry-style columns */
-  column-gap: 2rem; /* Space between columns */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Force 4 columns on large screens */
+  column-gap: 1rem;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: start;
   margin: auto;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 columns for medium-large screens */
+  }
 
   @media (max-width: 800px) {
-    column-count: 2; /* Reduce to 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
   }
 
   @media (max-width: 500px) {
-    column-count: 1; /* Single column layout on small screens */
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
     width: 80vw;
   }
 `;
 
 const Img = styled.img`
-  width: 18vw; /* Adjust width to account for padding */
+  width: 100%;
+  max-width: 400px; /* Prevents shrinking too much */
   height: auto;
   display: block;
-  break-inside: avoid;
-
-  cursor: pointer; /* Change cursor to pointer to indicate clickable images */
-
-  @media (max-width: 500px) {
-    width: 80vw; /* Ensure images scale properly to fill carousel */
-    margin: 0 auto; /* Center images in their container */
-  }
+  margin: 0 auto; /* Center the images */
+  cursor: pointer;
 `;
 
 const Container = styled.div`
