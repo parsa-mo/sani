@@ -175,17 +175,17 @@ const ShapewearProductPage = () => {
   const handleAddToCart = () => {
     if (quantity < 1) return; // Prevent adding 0 quantity
 
-    // ✅ Get current quantity of this item in the cart
+    // Get current quantity of this item in the cart
     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     const existingItem = cartItems.find(
       (item) => item.id === `${foldername}-${activeColor}-${activeSize}`,
     );
     const existingQuantity = existingItem ? existingItem.quantity : 0;
 
-    // ✅ Calculate total if adding
+    // Calculate total if adding
     const newTotalQuantity = existingQuantity + quantity;
 
-    // ✅ Prevent exceeding stock
+    // Prevent exceeding stock
     if (newTotalQuantity > maxQuantity) {
       setErrorMessage(
         `Only ${maxQuantity} in stock! You already have ${existingQuantity} in your cart.`,
@@ -194,15 +194,25 @@ const ShapewearProductPage = () => {
       return;
     }
 
-    // ✅ Reset error message if successful
+    // Calculate discounted price
+    const discountedPrice = firebaseFolderData?.SalePercentage
+      ? (
+          firebaseFolderData.Price -
+          (firebaseFolderData.Price * firebaseFolderData.SalePercentage) / 100
+        ).toFixed(2)
+      : firebaseFolderData.Price;
+
+    // Reset error message if successful
     setErrorMessage("");
 
     addToCart({
       id: `${foldername}-${activeColor}-${activeSize}`,
       folderID: foldername,
       name: firebaseFolderData?.Name,
-      price: firebaseFolderData?.Price,
-      quantity: quantity, // ✅ Correct quantity now
+      price: discountedPrice, // Use discounted price
+      originalPrice: firebaseFolderData?.Price, // Store original price for display
+      salePercentage: firebaseFolderData?.SalePercentage || null, // Store sale percentage
+      quantity: quantity,
       maxQuantity: maxQuantity,
       color: activeColor,
       size: activeSize,
@@ -260,7 +270,38 @@ const ShapewearProductPage = () => {
 
         <RightDiv>
           <Title>{firebaseFolderData?.Name || "Loading..."}</Title>
-          <Price>${firebaseFolderData?.Price || "N/A"}</Price>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}
+          >
+            {firebaseFolderData?.SalePercentage ? (
+              <>
+                <Price
+                  style={{
+                    textDecoration: "line-through",
+                    color: "gray",
+                    paddingBottom: "0",
+                  }}
+                >
+                  ${firebaseFolderData?.Price || "N/A"}
+                </Price>
+                <Price style={{ marginTop: "0", fontWeight: "bold" }}>
+                  $
+                  {(
+                    firebaseFolderData?.Price -
+                    (firebaseFolderData?.Price *
+                      firebaseFolderData?.SalePercentage) /
+                      100
+                  ).toFixed(2)}
+                </Price>
+              </>
+            ) : (
+              <Price>${firebaseFolderData?.Price || "N/A"}</Price>
+            )}
+          </div>
           <Paragraph>
             {firebaseFolderData?.Description1 || "Loading..."}
           </Paragraph>

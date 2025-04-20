@@ -25,7 +25,7 @@ export const FirebaseDataProvider = ({ children }) => {
 
   useEffect(() => {
     // Reference to the "Products" path in your database
-    const dbRef = ref(database, "Products");
+    const dbRef = ref(database, "TestProducts");
 
     // Listen for real-time updates
     const unsubscribe = onValue(

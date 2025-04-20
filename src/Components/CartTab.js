@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { faCartShopping, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { createPortal } from "react-dom";
@@ -30,7 +30,6 @@ const CartTab = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // ✅ Only open the cart when an item is ADDED (not removed)
     if (cartItems.length > 0) {
       setIsOpen(true);
     }
@@ -43,7 +42,6 @@ const CartTab = () => {
     setIsOpen(!isOpen);
   };
 
-  // Calculate total quantity and total price
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
     0,
@@ -52,12 +50,12 @@ const CartTab = () => {
     .reduce((total, item) => total + item.price * item.quantity, 0)
     .toFixed(2);
 
-  // Handle Checkout Button
   const handleCheckout = async () => {
     toggleCart();
     try {
-      const currentPage = window.location.href; // ✅ Get the last visited URL
+      const currentPage = window.location.href;
 
+      // Ensure cartItems include discounted prices
       const response = await fetch(
         "https://asia-southeast1-sani-85087.cloudfunctions.net/api/create-checkout-session",
         {
@@ -66,8 +64,17 @@ const CartTab = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            cartItems,
-            cancelUrl: currentPage, // ✅ Send last visited URL
+            cartItems: cartItems.map((item) => ({
+              id: item.id,
+              name: item.name,
+              price: item.price, // Discounted price
+              quantity: item.quantity,
+              image: item.image,
+              color: item.color,
+              size: item.size,
+              folderID: item.folderID,
+            })),
+            cancelUrl: currentPage,
           }),
         },
       );
@@ -75,7 +82,7 @@ const CartTab = () => {
       const data = await response.json();
 
       if (data.url) {
-        window.location.href = data.url; // ✅ Redirect to Stripe Checkout
+        window.location.href = data.url;
       } else {
         alert("Error creating checkout session");
       }
@@ -102,7 +109,6 @@ const CartTab = () => {
           </>
         ) : (
           <>
-            {/* 🛍️ Cart Items */}
             {cartItems.map((item) => (
               <ItemContainer key={item.id}>
                 <ImgDiv>
@@ -125,9 +131,24 @@ const CartTab = () => {
                   >
                     {item.name.toUpperCase()} - {item.color.toUpperCase()}
                   </Title>
-                  <InfoText>
-                    <InfoLabel>EACH: </InfoLabel> ${item.price}
-                  </InfoText>
+                  {item.salePercentage ? (
+                    <>
+                      <InfoText
+                        style={{
+                          textDecoration: "line-through",
+                          color: "gray",
+                          paddingBottom: "5px",
+                        }}
+                      >
+                        ${item.originalPrice}
+                      </InfoText>
+                      <InfoText style={{ fontWeight: "bold" }}>
+                        ${item.price}
+                      </InfoText>
+                    </>
+                  ) : (
+                    <InfoText>${item.price}</InfoText>
+                  )}
                   <div style={{ display: "flex", flexDirection: "row" }}>
                     <InfoText>
                       <InfoLabel>SIZE: </InfoLabel>
@@ -145,12 +166,10 @@ const CartTab = () => {
                 />
               </ItemContainer>
             ))}
-            {/* 🛒 Total Items and Total Price */}
             <CartSummary>
               <div>Total Items: {totalItems}</div>
               <div>Total: ${totalPrice}</div>
             </CartSummary>
-            {/* 🧹 Clear Cart & ✅ Checkout Buttons */}
             <ActionButtonsWrapper>
               <ActionButton
                 onClick={clearCart}
@@ -173,7 +192,6 @@ const CartTab = () => {
 
   return (
     <>
-      {/* Cart Icon */}
       <div
         style={{
           overflow: "hidden",
@@ -186,8 +204,6 @@ const CartTab = () => {
         <Span>{cartItems.length}</Span>
         <FontAwesomeIcon icon={faCartShopping} size="lg" />
       </div>
-
-      {/* Portal renders the cart outside the Navbar */}
       {createPortal(cartContent, document.getElementById("cart-portal"))}
     </>
   );

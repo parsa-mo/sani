@@ -206,7 +206,7 @@ const QuantityWrapper = styled.div`
   align-self: center;
   border: none;
   border-radius: 4px;
-  width: 80px;
+  width: 100px;
   height: 40px;
   justify-content: space-between;
   padding: 5px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Div, TopContainer } from "../Styles/UniversalContainers.js";
 import {
   StyledDiv,
@@ -10,11 +10,40 @@ import {
   PortalImage,
 } from "../Styles/HomeStyles";
 import { NavLink } from "react-router-dom";
-import weddingDress from "../Images/weddingDress.jpg";
-import fashion from "../Images/fashion.jpeg";
-import accessories from "../Images/accessories.jpg";
+import { FetchImages } from "../Components/FetchImages";
 
 const Home = () => {
+  const [images, setImages] = React.useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const fetchedImages = await FetchImages("HomePage");
+        const portalImages = {
+          gallery: null,
+          shapewear: null,
+          bridal: null,
+          accessories: null,
+        };
+
+        fetchedImages.forEach((image) => {
+          const url = image.url.toLowerCase();
+          if (url.includes("gallery")) portalImages.gallery = image;
+          else if (url.includes("shapewear")) portalImages.shapewear = image;
+          else if (url.includes("bridal")) portalImages.bridal = image;
+          else if (url.includes("accessories"))
+            portalImages.accessories = image;
+        });
+
+        setImages(portalImages);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   const handleMouseEnter = (e) => {
     const img = e.currentTarget.querySelector("img");
     if (img) {
@@ -52,28 +81,54 @@ const Home = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <PortalImage src={fashion} alt="fashion"></PortalImage>
-              <NavLink to="/gallery">
-                <PortalButton>Gallery</PortalButton>
-              </NavLink>
+              {images.gallery?.url && (
+                <>
+                  <PortalImage src={images.gallery.url} alt="gallery" />
+                  <NavLink to="/gallery">
+                    <PortalButton>Gallery</PortalButton>
+                  </NavLink>
+                </>
+              )}
             </PortalImageWrapper>
             <PortalImageWrapper
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <PortalImage src={weddingDress} alt="bridal"></PortalImage>
-              <NavLink to="/bridal">
-                <PortalButton>Bridal</PortalButton>
-              </NavLink>
+              {images.shapewear?.url && (
+                <>
+                  <PortalImage src={images.shapewear.url} alt="shapewear" />
+                  <NavLink to="/shapewear">
+                    <PortalButton>Shapewear</PortalButton>
+                  </NavLink>
+                </>
+              )}
             </PortalImageWrapper>
             <PortalImageWrapper
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <PortalImage src={accessories} alt="fashion"></PortalImage>
-              <NavLink to="/accessories">
-                <PortalButton>Accessories</PortalButton>
-              </NavLink>
+              {images.bridal?.url && (
+                <>
+                  <PortalImage src={images.bridal.url} alt="bridal" />
+                  <NavLink to="/bridal">
+                    <PortalButton>Bridal</PortalButton>
+                  </NavLink>
+                </>
+              )}
+            </PortalImageWrapper>
+            <PortalImageWrapper
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {images.accessories?.url && (
+                <>
+                  {" "}
+                  <PortalImage src={images.accessories.url} alt="bridal" />
+                  <NavLink to="/accessories">
+                    <PortalButton>Accessories</PortalButton>
+                  </NavLink>
+                </>
+              )}
             </PortalImageWrapper>
           </PortalDiv>
         </HomeContainer>
